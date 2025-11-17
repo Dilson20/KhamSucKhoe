@@ -1,0 +1,273 @@
+﻿@using System.Globalization;
+<link href="~/vendors/datatables.net/datatables.min.css" rel="stylesheet" />
+<div class="container">
+    <div class="row" style="margin-bottom: 60px"></div>
+    <h2 class="d-flex justify-content-center">Thông tin khám chữa bệnh ngoài TTYT : Admin</h2>
+    
+
+    <div class="row">
+        <div class="col-10">
+            <h4>Danh sách nhân viên VSP</h4>          
+        </div>
+        <div class="col-2 text-end">
+            <a class="btn btn-warning" asp-action="MainPage" asp-controller="Home" style="margin-bottom: 10px">Quay lại</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4>Lịch sử đăng ký</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <div class="input-group">
+                <label class="input-group-text" for="startDate">Từ ngày</label>
+                <input type="date" class="form-control" id="startDate" name="startDate" />
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="input-group">
+                <label class="input-group-text" for="endDate">Đến ngày</label>
+                <input type="date" class="form-control" id="endDate" name="endDate" />
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="input-group">
+                <label class="input-group-text" for="DanhSoUpload">Danh số</label>
+                <input type="text" class="form-control" id="DanhSoUpload" name="DanhSoUpload" />
+            </div>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-primary" type="button" id="btnSearchByDate">Tìm kiếm</button>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-primary" id="downloadasExcel">Xuất file theo ngày</button>
+        </div>
+       
+    </div>
+    <div class="row">
+            <table class="table" id="documentTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Đơn Vị</th>
+                        <th scope="col">Danh Số</th>
+                        <th scope="col">Tên nhân viên</th>
+                        <th scope="col">Chẩn đoán</th>
+                        <th scope="col">Ngày bắt đầu khám</th>
+                        <th scope="col">Ngày kết thúc khám</th>
+                        <th scope="col">Phương pháp điều trị</th>
+                        <th scope="col">Hình thức KCB</th>
+                        <th scope="col">Ghi chú</th>
+                        <th scope="col">Kết quả</th>
+                        <th scope="col">Options</th>
+                    </tr>
+                </thead>
+                <tbody id="documentTableBody">
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.TenDonVi</td>
+                            <td>@item.DanhSo</td>
+                            <td>@item.TenNhanVien</td>
+                            <td>@item.ThongTin</td>
+                            <td>@item.NgayBatDauKham?.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)</td>
+                            <td>@item.NgayKetThucKham?.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)</td>
+                            <td>@item.LoaiHinhDieuTri</td>
+                            <td>@item.HinhThucKCB</td>
+                            <td>@item.NoteByDoctor</td>
+                            <td>@item.Status</td>
+                            <td>
+                                <a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover" data-bs-toggle="tooltip" data-bs-placement="top"
+                                   title="" data-bs-original-title="Edit" asp-action="AdminUpdateDocument_BH" asp-controller="NgoaiVSP" asp-route-id="@item.Id">
+                                    <span class="icon">
+                                        <i class="fa fa-pencil-alt text-primary" role="button"></i>
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+    </div>
+    
+
+</div>
+
+@section Scripts {
+
+    <script src="~/vendors/datatables.net/datatables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#documentTable').DataTable({
+                "ordering": true,
+                searching: false,
+                info: false,
+                "paging": false,
+                fixedHeader: true,
+            });
+
+           $('#btnSearchByDate').on('click', function () {
+             var startDate = $('#startDate').val(); // Format: yyyy-MM-dd (from input type="date")
+             var endDate = $('#endDate').val(); // Format: yyyy-MM-dd (from input type="date")
+             var danhSo = $('#DanhSoUpload').val();
+
+             // Convert date to dd/MM/yyyy format for backend
+             var formattedStartDate = '';
+             var formattedEndDate = '';
+             
+             if (startDate) {
+                 // Handle different date formats from input type="date"
+                 if (startDate.includes('-')) {
+                     // Format: yyyy-MM-dd
+                     var parts = startDate.split('-');
+                     formattedStartDate = parts[2] + '/' + parts[1] + '/' + parts[0];
+                 } else if (startDate.includes('/')) {
+                     // Format: mm/dd/yyyy or dd/MM/yyyy - need to detect
+                     var parts = startDate.split('/');
+                     if (parts[0].length === 4) {
+                         // Format: yyyy/MM/dd
+                         formattedStartDate = parts[2] + '/' + parts[1] + '/' + parts[0];
+                     } else if (parseInt(parts[0]) > 12) {
+                         // Format: dd/MM/yyyy (day > 12)
+                         formattedStartDate = startDate;
+                     } else {
+                         // Format: mm/dd/yyyy - convert to dd/MM/yyyy
+                         formattedStartDate = parts[1] + '/' + parts[0] + '/' + parts[2];
+                     }
+                 }
+             }
+             
+             if (endDate) {
+                 // Handle different date formats from input type="date"
+                 if (endDate.includes('-')) {
+                     // Format: yyyy-MM-dd
+                     var parts = endDate.split('-');
+                     formattedEndDate = parts[2] + '/' + parts[1] + '/' + parts[0];
+                 } else if (endDate.includes('/')) {
+                     // Format: mm/dd/yyyy or dd/MM/yyyy - need to detect
+                     var parts = endDate.split('/');
+                     if (parts[0].length === 4) {
+                         // Format: yyyy/MM/dd
+                         formattedEndDate = parts[2] + '/' + parts[1] + '/' + parts[0];
+                     } else if (parseInt(parts[0]) > 12) {
+                         // Format: dd/MM/yyyy (day > 12)
+                         formattedEndDate = endDate;
+                     } else {
+                         // Format: mm/dd/yyyy - convert to dd/MM/yyyy
+                         formattedEndDate = parts[1] + '/' + parts[0] + '/' + parts[2];
+                     }
+                 }
+             }
+            
+                 $.ajax({
+                     url: '@Url.Action("GetDocument_BHByDateUpload", "NgoaiVSP")',
+                     type: 'GET',
+                        data: { startDate: formattedStartDate, endDate: formattedEndDate, danhSo: danhSo },
+                     success: function (data) {
+                         var tbody = '';
+                         if (data && data.length > 0) {
+                             $.each(data, function (i, item) {
+                                 tbody += '<tr>'
+                                     + '<td>' + $('<div>').text(item.tenDonVi || '').html() + '</td>'
+                                     + '<td>' + $('<div>').text(item.danhSo || '').html() + '</td>'
+                                     + '<td>' + $('<div>').text(item.tenNhanVien || '').html() + '</td>'
+                                     + '<td>' + $('<div>').text(item.thongTin || '').html() + '</td>'
+                                     + '<td>' + $('<div>').text(item.ngayBatDauKham ? moment(item.ngayBatDauKham).format('DD/MM/YYYY') : '').html() + '</td>'
+                                     + '<td>' + $('<div>').text(item.ngayKetThucKham ? moment(item.ngayKetThucKham).format('DD/MM/YYYY') : '').html() + '</td>'
+                                     + '<td>' + $('<div>').text(item.loaiHinhDieuTri || '').html() + '</td>'
+                                     + '<td>' + $('<div>').text(item.hinhThucKCB || '').html() + '</td>'
+                                     + '<td>' + $('<div>').text(item.noteByDoctor || '').html() + '</td>'
+                                     + '<td>' + $('<div>').text(item.status || '').html() + '</td>'
+                                     + '<td>'
+                                     + '<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover" data-bs-toggle="tooltip" data-bs-placement="top"'
+                                     + ' title="" data-bs-original-title="Edit" href="/NgoaiVSP/AdminUpdateDocument_BH/' + item.id + '">'
+                                     + '<span class="icon"><i class="fa fa-pencil-alt text-primary" role="button"></i></span>'
+                                     + '</a>'
+                                     + '</td>'
+                                     + '</tr>';
+                             });
+                         } else {
+                             tbody = '<tr><td colspan="11" class="text-center">Không có dữ liệu</td></tr>';
+                         }
+                         $('#documentTableBody').html(tbody);
+                     },
+                     error: function () {
+                         alert('Lỗi khi tải dữ liệu!');
+                     }
+                    });
+               });
+           });
+           $("#downloadasExcel").click(function () {
+               event.preventDefault();
+               var startDate = $('#startDate').val(); // Format: yyyy-MM-dd (from input type="date")
+               var endDate = $('#endDate').val(); // Format: yyyy-MM-dd (from input type="date")
+               
+               // Convert date to dd/MM/yyyy format for server
+               var formattedStartDate = '';
+               var formattedEndDate = '';
+               
+               if (startDate) {
+                   // Handle different date formats from input type="date"
+                   if (startDate.includes('-')) {
+                       // Format: yyyy-MM-dd
+                       var parts = startDate.split('-');
+                       formattedStartDate = parts[2] + '/' + parts[1] + '/' + parts[0];
+                   } else if (startDate.includes('/')) {
+                       // Format: mm/dd/yyyy or dd/MM/yyyy - need to detect
+                       var parts = startDate.split('/');
+                       if (parts[0].length === 4) {
+                           // Format: yyyy/MM/dd
+                           formattedStartDate = parts[2] + '/' + parts[1] + '/' + parts[0];
+                       } else if (parseInt(parts[0]) > 12) {
+                           // Format: dd/MM/yyyy (day > 12)
+                           formattedStartDate = startDate;
+                       } else {
+                           // Format: mm/dd/yyyy - convert to dd/MM/yyyy
+                           formattedStartDate = parts[1] + '/' + parts[0] + '/' + parts[2];
+                       }
+                   }
+               }
+               
+               if (endDate) {
+                   // Handle different date formats from input type="date"
+                   if (endDate.includes('-')) {
+                       // Format: yyyy-MM-dd
+                       var parts = endDate.split('-');
+                       formattedEndDate = parts[2] + '/' + parts[1] + '/' + parts[0];
+                   } else if (endDate.includes('/')) {
+                       // Format: mm/dd/yyyy or dd/MM/yyyy - need to detect
+                       var parts = endDate.split('/');
+                       if (parts[0].length === 4) {
+                           // Format: yyyy/MM/dd
+                           formattedEndDate = parts[2] + '/' + parts[1] + '/' + parts[0];
+                       } else if (parseInt(parts[0]) > 12) {
+                           // Format: dd/MM/yyyy (day > 12)
+                           formattedEndDate = endDate;
+                       } else {
+                           // Format: mm/dd/yyyy - convert to dd/MM/yyyy
+                           formattedEndDate = parts[1] + '/' + parts[0] + '/' + parts[2];
+                       }
+                   }
+               }
+               
+               var url = '@Url.Action("DocstoExcel", "NgoaiVSP")';
+               var params = [];
+               
+               if (formattedStartDate) {
+                   params.push('startDate=' + encodeURIComponent(formattedStartDate));
+               }
+               if (formattedEndDate) {
+                   params.push('endDate=' + encodeURIComponent(formattedEndDate));
+               }
+               
+               if (params.length > 0) {
+                   url += '?' + params.join('&');
+               }
+               
+               // Direct download
+               window.location.href = url;
+           });
+           
+    </script>
+    <script src="/vendors/moment.min.js"></script>
+}

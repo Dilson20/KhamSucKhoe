@@ -1,0 +1,570 @@
+﻿@using System.Globalization;
+
+<link href="~/vendors/daypilot/menu_maintenance.css" rel="stylesheet" />
+<link href="~/vendors/daypilot/modal_maintenance.css" rel="stylesheet" />
+<script src="~/vendors/daypilot/daypilot-all.min.js"></script>
+<div class="container">
+    <div class="row" style="margin-bottom: 60px"></div>
+    <h2 class="d-flex justify-content-center">Lịch khám sức khỏe - Admin</h2>
+    <div class="row" style="margin-bottom: 20px"></div>
+    <!-- Thông báo kết quả -->
+    <div class="row">
+        <div class="col-12">
+            <div id="thongBaoAdmin" class="alert d-none" role="alert"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-10">
+            <h4></h4>
+            
+        </div>
+        <div class="col-2 text-end">
+            <a class="btn btn-warning" asp-action="MainPage" asp-controller="Home" style="margin-bottom: 10px">@Loc["OutVsp.BacktoHomne"]</a>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-2">
+            <input type="date" class="form-control" id="fromDate" placeholder="Từ ngày" />
+        </div>
+        <div class="col-2">
+            <input type="date" class="form-control" id="toDate" placeholder="Đến ngày" />
+        </div>
+        <div class="col-2">
+            <select class="form-control" id="donviId">
+                <option value="">-- Đơn vị --</option>
+            </select>
+        </div>
+        <div class="col-2">
+            <select class="form-control" id="nhomId">
+                <option value="">-- Nhóm --</option>
+            </select>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-success" id="btnExportExcel">Xuất Excel</button>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-danger" id="btnExportChuaDangKy">Xuất Excel Chưa Đăng Ký</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4>Lập lịch</h4>
+        </div>
+    </div>
+   @*  display calendar showing created appointment  *@
+    <div class="row">
+        <div class="wrap">
+            <div class="left">
+                <div id="datepicker"></div>
+            </div>
+            <div class="right">
+                <div id="dp"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <style>
+        /* Ensure calendar container is responsive and has enough space */
+        .wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .left {
+            flex: 0 0 250px; /* Fixed width for datepicker */
+        }
+
+        .right {
+            flex: 1 1 auto; /* Calendar takes remaining space */
+            min-width: 0; /* Prevent overflow */
+        }
+
+
+        /* Style cho dấu + */
+        .add-new-text {
+            position: absolute;
+            top: 2px;
+            left: 17px;
+            color: #2E7D32;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10;
+            pointer-events: auto;
+        }
+
+        /* Tăng size chữ và làm đậm cho form modal */
+        .modal_maintenance_form_item label {
+            font-size: 16px !important;
+            font-weight: bold !important;
+            color: #333 !important;
+        }
+
+        .modal_maintenance_form_item input,
+        .modal_maintenance_form_item select,
+        .modal_maintenance_form_item textarea {
+            font-size: 15px !important;
+            font-weight: 500 !important;
+            color: #333 !important;
+        }
+
+        /* Đặc biệt cho dropdown đơn vị */
+        .modal_maintenance_form_item select option {
+            font-size: 15px !important;
+            font-weight: 500 !important;
+            padding: 8px !important;
+        }
+
+        /* Class cho đơn vị với size chữ lớn */
+        .event-donvi-text {
+            font-size: 16px !important;
+            font-weight: bold !important;
+        }
+
+        .add-new-text:hover {
+            color: #1B5E20;
+        }
+
+
+    </style>
+    <script>
+        $(document).ready(function () {
+             const dp = new DayPilot.Month("dp", {
+                startDate: DayPilot.Date.today(),
+                eventHeight: 150,
+                eventResizeHandling: "Disabled",
+
+
+                onTimeRangeSelecting: args => {
+                    const start = new DayPilot.Date(args.start);
+                    const end = new DayPilot.Date(args.end);
+                    args.allowed = start.toString("yyyy-MM-dd") === end.addDays(-1).toString("yyyy-MM-dd");
+                },
+                onTimeRangeSelected: async args => {
+                    const start = new DayPilot.Date(args.start);
+                    const end = new DayPilot.Date(args.end);
+                    app.handleAddEvent(start);
+                },
+                onCellClick: args => {
+                    // Handle cell click for Add + button
+                    const cell = args.cell;
+                    const addButton = cell.querySelector('.add-button');
+                    if (addButton && addButton.contains(args.e.target)) {
+                        app.handleAddEvent(args.cell.start);
+                        return;
+                    }
+                },
+
+
+
+
+                contextMenu: new DayPilot.Menu({
+                    theme: "menu_maintenance",
+                    onShow: args => {
+                        const e = args.source;
+                        const type = app.findType(e.data.type);
+                        //let text = `Schedule next (in ${desc})`;
+
+                        if (e.data.next) {
+                            // id, date
+                        }
+
+                        const del = args.menu.items.find(i => i.id === "delete");
+                        del.disabled = e.data.next;
+
+                    },
+                    items: [
+                         {
+                            text: "Delete",
+                            id: "delete",
+                            onClick: async args => {
+                                const taskId = args.source.data.id;
+                                if (!taskId || taskId === 0) {
+                                    showThongBaoAdmin('Không xác định được lịch cần xóa!', false);
+                                    return;
+                                }
+                                try {
+                                    const response = await fetch('/KhamSucKhoe/AdminDeleteLichKSK', {
+                                        method: 'POST',
+                                        headers: {
+                                           'Content-Type': 'application/json',
+                                           'RequestVerificationToken': getCsrfToken()
+                                        },
+                                        body: JSON.stringify(taskId)
+                                    });
+                                    const result = await response.json();
+                                    if (result.success) {
+                                        showThongBaoAdmin(result.message || 'Xóa lịch thành công!', true);
+                                        dp.events.remove(args.source);
+                                        await app.loadEvents();
+                                    } else {
+                                        showThongBaoAdmin(result.message || 'Xóa lịch thất bại!', false);
+                                    }
+                                } catch (error) {
+                                    showThongBaoAdmin('Xóa lịch thất bại!', false);
+                                }
+                             }
+                         }
+                    ]
+                }),
+                onEventClick: async args => {
+                    const e = args.e;
+                    app.showDetailUpdateEvent(e);
+                },
+                onBeforeEventRender: args => {
+                    const e = args.data;
+                    const type = app.data.types.find(d=>d.id == e.loaiNhom);
+                    const donVi = app.data.donVis.find(d => d.id == e.donViId);                  
+                    args.data.backColor = type?.color || "#3c78d8";
+                    args.data.fontColor = "#ffffff";
+                    args.data.borderColor = "darker";
+                    args.data.barColor = DayPilot.ColorUtil.darker(args.data.backColor, 2);
+                    args.data.html = `
+                        <div style="padding: 5px; font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.3;">
+                            <div style="font-weight: bold; font-size: 14px; margin-bottom: 2px; color: ${args.data.fontColor};">- ${donVi?.name || "Đơn vị?"}</div>
+                            <div style="font-weight: bold; font-size: 12px; margin-bottom: 3px; color: ${args.data.fontColor};">- ${type?.name || "Nhóm?"}</div>
+                            <div style="font-size: 12px; margin-bottom: 2px; color: ${args.data.fontColor};">- Số lượng: ${e.soLuong}</div>
+                            <div style="font-size: 12px; margin-bottom: 2px; color: ${args.data.fontColor};">- Bắt đầu: ${new Date(e.start).toLocaleTimeString('vi-VN', {hour: '2-digit', minute:'2-digit'})}</div>
+                            <div style="font-size: 12px; margin-bottom: 2px; color: ${args.data.fontColor};">- Kết thúc: ${new Date(e.end).toLocaleTimeString('vi-VN', {hour: '2-digit', minute:'2-digit'})}</div>
+                            <div style="font-size: 12px; margin-bottom: 2px; color: ${args.data.fontColor}; white-space: pre-wrap;">- GC: ${e.ghiChu || ""}</div>
+                        </div>
+                    `;
+                }
+            });
+            const datepicker = new DayPilot.Navigator("datepicker", {
+                selectMode: "Day",
+                showMonths: 3,
+                skipMonths: 3,
+                onTimeRangeSelected: args => {
+                    dp.update({ startDate: args.start });
+                    app.loadEvents();
+
+                }
+            });
+            const app = {
+                data: { types: [], donVis: [] },
+                findType: id => app.data.types.find(t => t.id === id),
+                findDonVi: id => app.data.donVis.find(t => t.id === id),
+                async handleAddEvent(selectedDate) {
+                    try {
+                        // Fix: Ensure selectedDate is properly converted to DayPilot.Date
+                        let start;
+                        if (selectedDate instanceof DayPilot.Date) {
+                            start = selectedDate;
+                        } else if (selectedDate && selectedDate.value) {
+                            start = new DayPilot.Date(selectedDate.value);
+                        } else {
+                            start = new DayPilot.Date(selectedDate);
+                        }
+                    
+                    // Construct the desired 07:00 AM time string with seconds
+                    const defaultTimeStr = start.toString("yyyy-MM-dd") + "T07:00:00";
+                    const maxTimeStr = start.toString("yyyy-MM-dd") + "T17:00:00";
+
+                    const form = [
+                        { name: "Nhóm", id: "LoaiNhom", type: "select", options: app.data.types },
+                        { name: "Đơn Vị", id: "DonViId", type: "select", options: app.data.donVis },
+                        { name: "Số Lượng", id: "SoLuong", type: "text" },
+                        { name: "Ghi Chú", id: "GhiChu", type: "text" },
+                        {
+                            name: "Thời gian bắt đầu",
+                            id: "ThoiGianBatDau",
+                            type: "datetime",
+                            value: defaultTimeStr
+                        },
+                        {
+                            name: "Thời gian kết thúc",
+                            id: "ThoiGianKetThuc",
+                            type: "datetime",
+                            value: defaultTimeStr
+                        }
+                    ];
+
+                    const data = {
+                        SoLuong: "",
+                        GhiChu: "",
+                        ThoiGianBatDau: defaultTimeStr,
+                        ThoiGianKetThuc: defaultTimeStr,
+                        LoaiNhom: app.data.types[0]?.id,
+                        DonViId: app.data.donVis[0]?.id
+                    };
+
+                    const modal = await DayPilot.Modal.form(form, data);
+                    if (modal.canceled) return;
+
+                    // Tạo lịch thủ công
+                    if (modal.result.SoLuong <= 0) {
+                        showThongBaoAdmin('Hãy nhập số lượng.', false);
+                    } else {
+                        const { data: task } = await DayPilot.Http.post("/KhamSucKhoe/AdminCreateLichKSK", modal.result, {
+                            headers: { 'RequestVerificationToken': getCsrfToken() }
+                        });
+                        if (task && task.success) {
+                            showThongBaoAdmin(task.message || 'Tạo lịch thành công!', true);
+                            // Reload toàn bộ dữ liệu từ server để đảm bảo có dữ liệu mới nhất
+                            await app.loadTypes();
+                            await app.loadDonVi();
+                            await app.loadEvents();
+                        } else {
+                            showThongBaoAdmin((task && task.message) || 'Tạo lịch thất bại!', false);
+                        }
+                    }
+                    } catch (error) {
+                        console.error('Error in handleAddEvent:', error);
+                        showThongBaoAdmin('Có lỗi xảy ra khi tạo lịch!', false);
+                    }
+                },
+                async loadTypes() {
+                    const { data } = await DayPilot.Http.get("/khamsuckhoe/AdminGetLoaiNhom");
+                    app.data.types = data.map(x => ({ id: x.id.toString(), name: x.tenNhom, color: x.color }));
+                },
+                async loadDonVi() {
+                    const { data } = await DayPilot.Http.get("/khamsuckhoe/GetDonVi");
+                    app.data.donVis = data.map(x => ({ id: x.id, name: x.tenTat || x.tenToChuc }));
+                },
+                addAddButtons() {
+                    // Try different selectors to find calendar cells
+                    let cells = document.querySelectorAll('#dp .dp_month_cell');
+                    if (cells.length === 0) {
+                        cells = document.querySelectorAll('#dp td');
+                    }
+                    if (cells.length === 0) {
+                        cells = document.querySelectorAll('#dp [class*="cell"]');
+                    }
+                    if (cells.length === 0) {
+                        cells = document.querySelectorAll('#dp [class*="day"]');
+                    }
+                    
+                    cells.forEach(cell => {
+                        const addButton = document.createElement('div');
+                        addButton.innerHTML = 'Add +';
+                        addButton.style.position = 'absolute';
+                        addButton.style.top = '2px';
+                        addButton.style.left = '2px';
+                        addButton.style.color = '#2E7D32';
+                        addButton.style.fontSize = '10px';
+                        addButton.style.fontWeight = 'bold';
+                        addButton.style.cursor = 'pointer';
+                        addButton.style.zIndex = '10';
+                        addButton.style.background = 'rgba(255,255,255,0.9)';
+                        addButton.style.padding = '1px 3px';
+                        addButton.style.borderRadius = '2px';
+                        
+                        addButton.className = 'add-button';
+                        // Remove onclick handler - let onCellClick handle it
+                        
+                        cell.appendChild(addButton);
+                    });
+                },
+                async loadEvents() {
+                    try {
+                        const { data } = await DayPilot.Http.get("/khamsuckhoe/AdminGetLichKham");
+                        
+                        if (data && Array.isArray(data)) {
+                            dp.update({ events: data });
+                            // Re-add "Add +" text after calendar update
+                            setTimeout(() => {
+                                app.addAddButtons();
+                                app.enhanceDonViText();
+                            }, 100);
+                        } else {
+                            dp.update({ events: [] });
+                        }
+                    } catch (error) {
+                        dp.update({ events: [] });
+                    }
+                    
+
+                },
+                
+                enhanceDonViText() {
+                    // Tìm tất cả text có chứa "Đơn vị:" và tăng size
+                    const eventElements = document.querySelectorAll('.calendar_default_event_inner');
+                    eventElements.forEach(element => {
+                        const textContent = element.innerHTML;
+                        if (textContent.includes('Đơn vị:')) {
+                            // Wrap phần đơn vị với class đặc biệt
+                            const enhancedContent = textContent.replace(
+                                /(Đơn vị:[^<\n\r]*)/g, 
+                                '<span class="event-donvi-text">$1</span>'
+                            );
+                            element.innerHTML = enhancedContent;
+                        }
+                    });
+                },
+
+                async showDetailUpdateEvent(e) {
+                    const type = app.data.types.find(d => d.id == e.data.loaiNhom);
+                    const donVi = app.data.donVis.find(d => d.id == e.data.donViId);
+
+                    // Prepare initial data object with current event values
+                    const initialData = {
+                        DonViId: e.data.donViId,
+                        SoLuong: e.data.soLuong,
+                        GhiChu: e.data.ghiChu,
+                        ThoiGianBatDau: e.data.start,
+                        ThoiGianKetThuc: e.data.end,
+                        LoaiNhom: e.data.loaiNhom
+                    };
+                 
+                    const form = [
+                        { name: "Đơn Vị", id: "DonViId", type: "select", options: app.data.donVis, disabled: true, value: e.data.donViId.toString() },
+                        { name: "Số lượng", id: "SoLuong", type: "text", value: e.data.soLuong },
+                        { name: "Ghi Chú", id: "GhiChu", type: "text", value: e.data.ghiChu },
+                        { name: "Nhóm", id: "LoaiNhom", type: "select", options: app.data.types, disabled: true, value: e.data.loaiNhom.toString() },
+                        {
+                        name: "Thời gian bắt đầu",
+                        id: "ThoiGianBatDau",
+                        type: "datetime",
+                        value: e.data.start
+                    },
+                    {
+                        name: "Thời gian kết thúc",
+                        id: "ThoiGianKetThuc",
+                        type: "datetime",
+                        value: e.data.end
+                    }
+                    ];
+
+                    const modal = await DayPilot.Modal.form(form, initialData);
+                    if (modal.canceled) return;
+
+                    const updatedData = {
+                        id: e.data.id,
+                        soLuong: modal.result.SoLuong,
+                        ghiChu: modal.result.GhiChu,
+                        loaiNhom: e.data.loaiNhom,
+                        donViId: e.data.donViId,
+                        thoiGianBatDau: modal.result.ThoiGianBatDau,
+                        thoiGianKetThuc: modal.result.ThoiGianKetThuc
+                    };
+                    console.log(updatedData);
+                    const { data: updatedEvent } = await DayPilot.Http.post("/KhamSucKhoe/AdminUpdateLichKSK", updatedData, {
+                        headers: { 'RequestVerificationToken': getCsrfToken() }
+                    });
+                    if (updatedEvent && updatedEvent.success) {
+                        showThongBaoAdmin(updatedEvent.message || 'Cập nhật lịch thành công!', true);
+                        // Cập nhật event với thời gian mới
+                        const updatedEventData = {
+                            ...e.data,
+                            start: modal.result.ThoiGianBatDau,
+                            end: modal.result.ThoiGianKetThuc,
+                            soLuong: modal.result.SoLuong,
+                            ghiChu: modal.result.GhiChu
+                        };
+                        dp.events.update(updatedEventData);
+                    } else {
+                        showThongBaoAdmin((updatedEvent && updatedEvent.message) || 'Cập nhật lịch thất bại!', false);
+                    }
+                },
+                async init() {
+                    dp.init();
+                    datepicker.init();
+                    await app.loadTypes();
+                    await app.loadDonVi();
+                    app.loadEvents();
+                    
+
+                }
+            };
+
+            window.app = app;
+            app.init();
+            
+            // Add "Add +" text to all cells after calendar is initialized
+            setTimeout(() => {
+                app.addAddButtons();
+            }, 500);
+        });
+        
+           
+    </script>
+    <script>
+function showThongBaoAdmin(message, isSuccess) {
+    var $alert = $("#thongBaoAdmin");
+    $alert.removeClass("d-none alert-success alert-danger");
+    $alert.addClass(isSuccess ? "alert-success" : "alert-danger");
+    $alert.text(message);
+    $alert.show();
+    setTimeout(function () {
+        $alert.fadeOut(500, function () {
+            $alert.addClass("d-none").show();
+        });
+    }, 3000);
+}
+function getCsrfToken() {
+    return document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || '';
+}
+</script>
+    <script>
+$(document).ready(function () {
+    // Load đơn vị
+    $.get('/KhamSucKhoe/GetDonVi', function (data) {
+        if (data && data.length) {
+            data.forEach(function (dv) {
+                $('#donviId').append(`<option value="${dv.id}">${dv.tenToChuc}</option>`);
+            });
+        }
+    });
+    // Load nhóm
+    $.get('/KhamSucKhoe/AdminGetLoaiNhom', function (data) {
+        if (data && data.length) {
+            data.forEach(function (nhom) {
+                $('#nhomId').append(`<option value="${nhom.id}">${nhom.tenNhom}</option>`);
+            });
+        }
+    });
+
+    // Xuất Excel
+    $('#btnExportExcel').click(function () {
+        var fromDate = $('#fromDate').val();
+        var toDate = $('#toDate').val();
+        var donviId = $('#donviId').val();
+        var nhomId = $('#nhomId').val();
+        
+        // Kiểm tra bắt buộc chọn thời gian và nhóm
+        if (!fromDate) {
+            showThongBaoAdmin('Vui lòng chọn từ ngày!', false);
+            return;
+        }
+        
+        if (!toDate) {
+            showThongBaoAdmin('Vui lòng chọn đến ngày!', false);
+            return;
+        }
+        
+        if (!nhomId) {
+            showThongBaoAdmin('Vui lòng chọn nhóm!', false);
+            return;
+        }
+        
+        var url = '/KhamSucKhoe/ExportKSKToExcel?';
+        if (fromDate) url += 'fromDate=' + fromDate + '&';
+        if (toDate) url += 'toDate=' + toDate + '&';
+        if (donviId) url += 'donviId=' + donviId + '&';
+        if (nhomId) url += 'nhomId=' + nhomId + '&';
+        window.location.href = url;
+    });
+
+    // Xuất Excel Chưa Đăng Ký
+    $('#btnExportChuaDangKy').click(function () {
+        var donviId = $('#donviId').val();
+        
+        // Kiểm tra bắt buộc chọn đơn vị
+        if (!donviId) {
+            showThongBaoAdmin('Vui lòng chọn đơn vị trước khi xuất Excel danh sách chưa đăng ký!', false);
+            return;
+        }
+        
+        var url = '/KhamSucKhoe/ExportChuaDangKyKSKToExcel?donviId=' + donviId;
+        window.location.href = url;
+    });
+});
+</script>
+}

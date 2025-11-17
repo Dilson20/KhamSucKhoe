@@ -1,0 +1,106 @@
+﻿@using System.Globalization;
+@{
+    var danhSo = Context.User.Identity.Name;
+    var userType = Context.User.Claims.FirstOrDefault(c => c.Type == "UserType")?.Value;
+    var isNuChuyenDe = userType == "ChuyenDeNu";
+    var fullName = Context.User.Claims.FirstOrDefault(c => c.Type == "FullName")?.Value;
+}
+
+<div class="container home">
+    
+    <div class="row" style="margin-bottom: 80px">
+        <div class="d-flex justify-content-end align-items-center">
+            @if (!string.IsNullOrEmpty(fullName))
+            {
+                <span class="fw-bold">👤 @fullName</span>
+            }
+        </div>
+    </div>
+    <div class="hero-section">
+        <h1 class="d-flex justify-content-center">@Loc["mainpage.MainHealthCheck"]</h1>
+    </div>
+
+    <div class="row g-4">
+        @if (isNuChuyenDe)
+        {
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Đăng ký khám sức khỏe nhóm 3</h3>
+                        <p>Bạn chỉ được sử dụng chức năng dành cho nhóm 3 (chuyên đề nữ). Đăng ký khám nhóm 3</p>
+                        <a class="btn btn-primary" asp-action="Index" asp-controller="KhamSucKhoe">Đăng ký khám nhóm 3</a>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            @* <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>@Loc["mainpage.RegisterForHealthCheck"]</h3>
+                        <p>@Loc["mainpage.RegisterForHealthCheckDetail"]</p>
+                        <a class="btn btn-primary" asp-action="Index" asp-controller="DangKy">@Loc["mainpage.Register"]</a>
+                    </div>
+                </div>
+            </div> *@
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>@Loc["mainpage.RegisterForHealthCheck"]</h3>
+                        <p>@Loc["mainpage.RegisterForHealthCheckDetail"]</p>
+                        <div class="d-flex align-items-center justify-content-between gap-2">
+                            <a class="btn btn-primary" asp-action="Index" asp-controller="KhamSucKhoe">@Loc["mainpage.Register"]</a>
+                            @if (Context.User.IsInRole("Admin") || Context.User.IsInRole("Medic"))
+                            {
+                                <a asp-action="AdminIndex" asp-controller="KhamSucKhoe" class="nav-item">
+                                    <h5 style="color:darkred" class="mb-0">Admin</h5>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>@Loc["mainpage.InforOutsideVsp"]</h3>
+                        <p>@Loc["mainpage.InforOutsideVspDetail"]</p>
+                        <div class="d-flex align-items-center justify-content-between gap-2">
+
+                            <a class="btn btn-primary" asp-action="Index" asp-controller="NgoaiVSP">@Loc["mainpage.Register"]</a>
+                            @if (Context.User.IsInRole("Admin") || Context.User.IsInRole("Medic"))
+                            {
+                                <a asp-action="AdminIndex" asp-controller="NgoaiVSP" class="nav-item">
+                                    <h5 style="color:darkred" class="mb-0">Admin</h5>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        @if ((Context.User.IsInRole("Admin") || Context.User.IsInRole("Medic")) && !isNuChuyenDe)
+        {
+        <div class="col-md-6">
+            <div class="card border-success">
+                <div class="card-body">
+                    <h3>Phê duyệt đăng ký chuyên đề nữ</h3>
+                    <p>Quản trị viên duyệt/từ chối các đăng ký khám chuyên đề nữ.</p>
+                    <a class="btn btn-success" asp-action="AdminIndex" asp-controller="ChuyenDeNuRegister">Vào trang phê duyệt</a>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+    
+</div>
+
+
+@section Scripts {
+    <script>
+        //    $(document).ready(function () {
+        //        showModalLogin('Login','modal-md');
+           // });
+    </script>
+}

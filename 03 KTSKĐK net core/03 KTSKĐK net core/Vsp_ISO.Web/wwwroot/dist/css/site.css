@@ -1,0 +1,332 @@
+﻿
+.accordion-menu:not(.active) .accordion-button {
+    font-weight: normal !important;
+    background: transparent !important;
+    color: #0a0a0a !important;
+}
+.accordion-menu.active .accordion-button {
+    font-weight: bold !important;
+    background: #b7e5e9 !important;
+    color: #0a0a0a !important;
+}
+
+
+.accordion-body:not(.active) {
+    font-weight: normal !important;
+    background: transparent !important;
+    color: #0a0a0a !important;
+}
+
+.accordion-body.active {
+    font-weight: bold !important;
+    background: #b7e5e9 !important;
+    color: #0a0a0a !important;
+}
+.active {
+    font-weight: bold !important;
+    background: #b7e5e9 !important;
+    color: #0a0a0a !important;
+}
+:root {
+    --bs-body-font-family: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+}
+.searchbox{
+    display:contents!important;
+}
+.emailapp-wrap .emailapp-content .emailapp-aside header.aside-header{
+    height:40px!important;
+}
+.emailapp-wrap .emailapp-content .emailapp-single-email header.email-header{
+    height:40px!important;
+}
+.hk-sidebar-togglable{
+    top:26px!important;
+}
+
+
+.tr-inspection:hover {
+    cursor:pointer;
+}
+
+textarea.note {
+    display: block !important;
+}
+.emailapp-wrap .emailapp-content .emailapp-aside{
+    width:100%!important;
+    flex-grow:1!important;
+}
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+.th-title{
+    font-size:12px!important;
+    font-weight:600!important;
+}
+.td-data{
+    font-size:13px!important;
+    color:black!important;
+    font-weight:500!important;
+}
+
+@media only screen and (max-width: 600px){
+    .offcanvas-end {
+        width: 100% !important;
+    }
+
+    .supportInformation {
+        display: none;
+    }
+    
+}
+
+@media only screen and (min-width: 600px) {
+    .offcanvas-end {
+        width: 70% !important;
+    }
+    .supportInformation {
+        display: block;
+    }
+
+}
+.offcanvas-header {
+    padding: 5px !important;
+    color: white!important;
+}
+#offcanvasRightLabel{
+    color:white!important;
+}
+.offcanvas-body{
+    padding:10px!important;
+}
+table.table-file td{
+    padding:5px!important;
+}
+table.table-file th {
+    padding: 5px !important;
+}
+.preview-file {
+    overflow: auto !important;
+    height: 800px !important;
+}
+
+.table-advance tbody tr td.td-noboder {
+    border: none !important;
+    padding: 0px !important;
+    text-align: center !important;
+}
+.table-advance tbody tr td.td-noboder:after {
+    border: none !important;
+    background-color: transparent !important;
+}
+.td-noboder {
+    background-color: transparent !important;
+}
+
+.input-group-text{
+    min-width:30px!important;
+    padding:5px!important;
+}
+/* layout */
+.wrap {
+    display: flex;
+}
+
+.left {
+    margin-right: 10px;
+}
+
+.right {
+    flex-grow: 1;
+}
+
+/* ===== LANGUAGE SELECTOR STYLES ===== */
+.language-selector {
+    margin-left: 1rem;
+}
+
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    color: #6c757d;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 140px;
+    justify-content: space-between;
+    height: 48px;
+}
+
+.language-toggle:hover {
+    background: #f8f9fa;
+    border-color: #adb5bd;
+    color: #495057;
+}
+
+.language-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #0d6efd;
+}
+
+.flag-emoji {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.language-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.language-toggle i {
+    font-size: 0.75rem;
+    transition: transform 0.2s ease;
+}
+
+.language-dropdown.active .language-toggle i {
+    transform: rotate(180deg);
+}
+
+.language-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    min-width: 160px;
+    z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.language-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-form {
+    margin: 0;
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.language-option:last-child {
+    border-bottom: none;
+}
+
+.language-option:hover {
+    background: #f8f9fa;
+    color: #0d6efd;
+}
+
+.language-option .flag-emoji {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.language-option .language-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .language-selector {
+        margin-left: 0.5rem;
+    }
+    
+    .language-toggle {
+        min-width: 120px;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .language-menu {
+        right: -0.5rem;
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-toggle {
+        min-width: 100px;
+        padding: 0.5rem;
+    }
+    
+    .language-toggle .language-text {
+        display: none;
+    }
+    
+    .language-menu {
+        right: -1rem;
+        min-width: 120px;
+    }
+}
+
+/* Header Contact Info for Default Header */
+.header-contact {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #6c757d;
+    white-space: nowrap;
+}
+
+.contact-item i {
+    color: #22c55e;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .header-contact {
+        display: none;
+    }
+}
+

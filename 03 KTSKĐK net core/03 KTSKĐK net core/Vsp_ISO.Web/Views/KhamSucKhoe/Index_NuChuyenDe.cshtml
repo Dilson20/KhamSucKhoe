@@ -1,0 +1,270 @@
+@model dynamic
+<div class="container">
+    <div class="row" style="margin-bottom: 60px"></div>
+    <h2 class="d-flex justify-content-center">Đăng ký khám sức khỏe chuyên đề nữ</h2>
+    <div class="row">
+        <div class="col-10">
+            <a class="btn btn-warning" asp-action="MainPage" asp-controller="Home" style="margin-bottom: 10px">Quay lại trang chính</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4>Thông tin đăng ký</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <ul class="list-ul ">
+                <li>Họ và Tên: <strong>@User.Claims.FirstOrDefault(c => c.Type == "FullName")?.Value</strong></li>
+                <li>Danh số: <strong>@User.Identity.Name</strong></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Lịch đã đăng ký -->
+    <div class="row" id="lichDaDangKy">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Lịch đã đăng ký</h5>
+                </div>
+                <div class="card-body">
+                    <div id="danhSachLichDaDangKy">
+                        <div class="text-center">
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Đang tải...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Form đăng ký KSK nhóm 3 -->
+    <div class="row" id="dangKyForm">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Đăng ký khám chuyên đề nữ</h5>
+                </div>
+                <div class="card-body">
+                    <form id="formDangKy">
+                        @Html.AntiForgeryToken()
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="lichKhamSelect" class="form-label">Chọn lịch khám:</label>
+                                    <select class="form-select" id="lichKhamSelect" name="LichKhamSucKhoeId" required>
+                                        <option value="">-- Chọn lịch khám nhóm 3 --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="yeuCauDacBiet" class="form-label">Yêu cầu đặc biệt:</label>
+                                    <textarea class="form-control" id="yeuCauDacBiet" name="YeuCauDacBiet" rows="3" placeholder="Nhập yêu cầu đặc biệt (nếu có)"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="button" class="btn btn-primary" id="btnDangKy">
+                                    <i class="fas fa-save"></i> Đăng ký
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Thông báo kết quả -->
+    <div class="row">
+        <div class="col-12">
+            <div id="thongBaoDangKy" class="alert d-none" role="alert"></div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        function getCsrfToken() {
+            return $("input[name='__RequestVerificationToken']").val();
+        }
+        var daDangKyNhom3 = false; // Biến kiểm tra đã đăng ký nhóm 3 chưa
+
+        $(document).ready(function () {
+            loadLichKhamNhom3();
+            loadLichDaDangKy();
+            checkDaDangKyNhom3(); // Kiểm tra đã đăng ký chưa
+            
+            // Disable nút đăng ký ban đầu
+            $('#btnDangKy').prop('disabled', true);
+
+            // Xử lý khi chọn lịch khám
+            $('#lichKhamSelect').change(function () {
+                var selectedValue = $(this).val();
+                
+                // Enable/disable nút đăng ký dựa trên việc có chọn lịch hay không
+                if (selectedValue && selectedValue !== '') {
+                    $('#btnDangKy').prop('disabled', false);
+                } else {
+                    $('#btnDangKy').prop('disabled', true);
+                }
+            });
+
+            // Xử lý đăng ký
+            $('#btnDangKy').click(function () {
+                if (daDangKyNhom3) {
+                    showThongBao('Bạn đã đăng ký khám chuyên đề nữ rồi!', false);
+                    return;
+                }
+
+                var formData = {
+                    LichKhamSucKhoeId: parseInt($('#lichKhamSelect').val()),
+                    YeuCauDacBiet: $('#yeuCauDacBiet').val()
+                };
+                if (!formData.LichKhamSucKhoeId) {
+                    showThongBao('Vui lòng chọn lịch khám!', false);
+                    return;
+                }
+                $.ajax({
+                    url: '@Url.Action("CreateNhanVienDangKy", "KhamSucKhoe")',
+                    type: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'RequestVerificationToken': getCsrfToken()
+                    },
+                    contentType: 'application/json',
+                    data: JSON.stringify(formData),
+                    success: function (response) {
+                        if (response.success) {
+                            showThongBao(response.message || 'Đăng ký thành công!', true);
+                            $('#formDangKy')[0].reset();
+                            $('#lichKhamSelect').empty().append('<option value="">-- Chọn lịch khám nhóm 3 --</option>');
+                            // Disable nút đăng ký sau khi reset
+                            $('#btnDangKy').prop('disabled', true);
+                            // Reload danh sách lịch khám để cập nhật số chỗ còn lại
+                            loadLichKhamNhom3();
+                            loadLichDaDangKy();
+                            checkDaDangKyNhom3(); // Kiểm tra lại sau khi đăng ký
+                        } else {
+                            let msg = response.message || 'Có lỗi xảy ra!';
+                            if (response.errors && response.errors.length > 0) {
+                                msg += '<ul>' + response.errors.map(e => '<li>' + e + '</li>').join('') + '</ul>';
+                            }
+                            showThongBao(msg, false);
+                        }
+                    },
+                    error: function (xhr) {
+                        let msg = 'Có lỗi xảy ra khi đăng ký!';
+                        if (xhr.responseJSON && xhr.responseJSON.message) {
+                            msg = xhr.responseJSON.message;
+                        }
+                        if (xhr.responseJSON && xhr.responseJSON.errors && xhr.responseJSON.errors.length > 0) {
+                            msg += '<ul>' + xhr.responseJSON.errors.map(e => '<li>' + e + '</li>').join('') + '</ul>';
+                        }
+                        showThongBao(msg, false);
+                    }
+                });
+            });
+
+            function checkDaDangKyNhom3() {
+                $.ajax({
+                    url: '@Url.Action("GetLoaiNhomDaDangKy", "KhamSucKhoe")',
+                    type: 'GET',
+                    success: function (data) {
+                        daDangKyNhom3 = data && data.includes(3); // Kiểm tra có nhóm 3 không
+                        updateFormDangKy();
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Lỗi khi kiểm tra đăng ký:', error);
+                        daDangKyNhom3 = false;
+                    }
+                });
+            }
+
+            function updateFormDangKy() {
+                if (daDangKyNhom3) {
+                    // Khóa form đăng ký
+                    $('#lichKhamSelect').prop('disabled', true);
+                    $('#yeuCauDacBiet').prop('disabled', true);
+                    $('#btnDangKy').prop('disabled', true).text('Đã đăng ký').removeClass('btn-primary').addClass('btn-secondary');
+                    
+                    // Thêm thông báo
+                    $('#dangKyForm .card-body').prepend('<div class="alert alert-success mb-3">Bạn đã đăng ký khám chuyên đề nữ thành công!</div>');
+                } else {
+                    // Mở khóa form đăng ký
+                    $('#lichKhamSelect').prop('disabled', false);
+                    $('#yeuCauDacBiet').prop('disabled', false);
+                    
+                    // Kiểm tra xem có lịch được chọn không để quyết định enable/disable nút
+                    var selectedValue = $('#lichKhamSelect').val();
+                    if (selectedValue && selectedValue !== '') {
+                        $('#btnDangKy').prop('disabled', false).text('Đăng ký').removeClass('btn-secondary').addClass('btn-primary');
+                    } else {
+                        $('#btnDangKy').prop('disabled', true).text('Đăng ký').removeClass('btn-secondary').addClass('btn-primary');
+                    }
+                    
+                    // Xóa thông báo nếu có
+                    $('#dangKyForm .card-body .alert-success').remove();
+                }
+            }
+
+            function loadLichKhamNhom3() {
+                $.ajax({
+                    url: '@Url.Action("GetLichKhamByLoai", "KhamSucKhoe")?loaiNhom=3',
+                    type: 'GET',
+                    success: function (data) {
+                        $('#lichKhamSelect').empty().append('<option value="">-- Chọn lịch khám nhóm 3 --</option>');
+                        if (data && data.length > 0) {
+                            data.forEach(function (item) {
+                                // Chỉ hiển thị lịch còn chỗ trống
+                                if (item.soSlotTrong > 0) {
+                                    var optionText = item.thoiGianKSK + ' (' + (item.tenDonVi || 'Không xác định') + ') - Chỗ còn: ' + item.soSlotTrong + '/' + item.soLuong;
+                                    $('#lichKhamSelect').append('<option value="' + item.id + '">' + optionText + '</option>');
+                                }
+                            });
+                            
+                            // Kiểm tra xem có lịch nào còn chỗ không
+                            var availableSchedules = data.filter(function(item) { return item.soSlotTrong > 0; });
+                            if (availableSchedules.length === 0) {
+                                $('#lichKhamSelect').append('<option value="" disabled>Tất cả lịch khám đã hết chỗ</option>');
+                            }
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        $('#lichKhamSelect').empty().append('<option value="">Không tải được lịch khám</option>');
+                    }
+                });
+            }
+            function loadLichDaDangKy() {
+                $.ajax({
+                    url: '@Url.Action("GetLichDaDangKy", "KhamSucKhoe")',
+                    type: 'GET',
+                    success: function (data) {
+                        var html = '';
+                        if (data && data.length > 0) {
+                            html += '<ul>';
+                            data.forEach(function (item) {
+                                html += '<li>' + $('<div>').text(item.thoiGianKSK + ' (' + (item.tenDonVi || 'Không xác định') + ')').html() + '</li>';
+                            });
+                            html += '</ul>';
+                        } else {
+                            html = '<span>Chưa có lịch nào được đăng ký.</span>';
+                        }
+                        $('#danhSachLichDaDangKy').html(html);
+                    },
+                    error: function () {
+                        $('#danhSachLichDaDangKy').html('<span>Lỗi khi tải lịch đã đăng ký.</span>');
+                    }
+                });
+            }
+            function showThongBao(msg, isSuccess) {
+                var alertClass = isSuccess ? 'alert-success' : 'alert-danger';
+                $('#thongBaoDangKy').removeClass('d-none alert-success alert-danger').addClass(alertClass).html(msg);
+                setTimeout(function () {
+                    $('#thongBaoDangKy').addClass('d-none');
+                }, 4000);
+            }
+        });
+    </script>
+} 

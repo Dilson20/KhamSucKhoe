@@ -1,0 +1,135 @@
+@model VSP_HealthExam.Web.EditModels.Register.ChuyenDeNuRegister_EditModel
+@{
+    ViewData["Title"] = "Đăng ký khám chuyên đề nữ";
+}
+
+<div class="container mt-4">
+    <div class="row" style="margin-bottom: 60px"></div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">
+                        <i class="fas fa-user-plus"></i> Đăng ký khám chuyên đề nữ
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div id="error-message" class="alert alert-danger" style="display:none"></div>
+                    <form id="registerForm">
+                        @Html.AntiForgeryToken()
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="DanhSoCu" class="form-label">Danh số cũ <span class="text-danger">*</span></label>
+                                    <input asp-for="DanhSoCu" class="form-control" placeholder="Nhập danh số cũ" required />
+                                    <span asp-validation-for="DanhSoCu" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="FullName" class="form-label">Họ và Tên <span class="text-danger">*</span></label>
+                                    <input asp-for="FullName" class="form-control" placeholder="Nhập họ và tên" required />
+                                    <span asp-validation-for="FullName" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="Password" class="form-label">Mật khẩu <span class="text-danger">*</span></label>
+                                    <input asp-for="Password" type="password" class="form-control" placeholder="Nhập mật khẩu" required />
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="Email" class="form-label">Email <span class="text-danger">*</span></label>
+                                    <input asp-for="Email" type="email" class="form-control" placeholder="Nhập email" required />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="SoDienThoai" class="form-label">Số điện thoại <span class="text-danger">*</span></label>
+                                    <input asp-for="SoDienThoai" class="form-control" placeholder="Nhập số điện thoại" required />
+                                    <span asp-validation-for="SoDienThoai" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="DonViId" class="form-label">Đơn vị <span class="text-danger">*</span></label>
+                                    <select asp-for="DonViId" class="form-select" required>
+                                        <option value="">-- Chọn đơn vị --</option>
+                                        @if (ViewBag.DonViList != null)
+                                        {
+                                            foreach (var donVi in ViewBag.DonViList)
+                                            {
+                                                <option value="@donVi.ID_DonVi">@donVi.TenToChuc</option>
+                                            }
+                                        }
+                                    </select>
+                                    <span asp-validation-for="DonViId" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle"></i>
+                                <strong>Lưu ý:</strong> Sau khi đăng ký, yêu cầu của bạn sẽ được gửi đến admin để phê duyệt. 
+                                Vui lòng chờ thông báo phê duyệt.
+                            </div>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane"></i> Đăng ký
+                            </button>
+                            <a href="@Url.Action("Index", "Home")" class="btn btn-secondary btn-lg ms-2">
+                                <i class="fas fa-home"></i> Về trang chủ
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#registerForm').on('submit', function (e) {
+                e.preventDefault();
+                $('#error-message').hide();
+                var formData = {
+                    DanhSoCu: $('#DanhSoCu').val(),
+                    FullName: $('#FullName').val(),
+                    Password: $('#Password').val(),
+                    Email: $('#Email').val(),
+                    SoDienThoai: $('#SoDienThoai').val(),
+                    DonViId: $('#DonViId').val()
+                };
+                $.ajax({
+                    url: '@Url.Action("Create", "ChuyenDeNuRegister")',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    headers: { 'RequestVerificationToken': $('meta[name="csrf-token"]').attr('content') },
+                    data: JSON.stringify(formData),
+                    success: function (response) {
+                        if (response.success && response.redirectUrl) {
+                            window.location = response.redirectUrl;
+                        } else {
+                            $('#error-message').text(response.message).show();
+                        }
+                    },
+                    error: function (xhr) {
+                        let msg = 'Có lỗi xảy ra khi gửi yêu cầu. Vui lòng thử lại.';
+                        if (xhr.responseJSON && xhr.responseJSON.message) msg = xhr.responseJSON.message;
+                        $('#error-message').text(msg).show();
+                    }
+                });
+            });
+        });
+    </script>
+} 
