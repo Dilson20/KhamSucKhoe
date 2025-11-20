@@ -1,0 +1,82 @@
+﻿@using System.Globalization;
+<link href="~/dist/css/styleksk.css" rel="stylesheet" asp-append-version="true" />
+<div class="row" style="margin-bottom: 50px"></div>
+<div class="container home">
+    <div class="hero-section">
+        <h1>@Loc["Home.Title"]</h1>
+        <p>@Loc["Home.Welcome"]</p>
+    </div>
+    <div class="row g-4" style="display: flex; margin-bottom: 4rem;">
+        <div class="col-md-6 d-flex">
+            <div class="card w-100">
+                <div class="card-body">
+                    <h5>@Loc["Home.LoginDescription"]</h5>
+                    <a href="/Account/Login" class="btn btn-primary btn-lg btn-action mt-3">@Loc["Home.Login"]</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex">
+            <div class="card w-100">
+                <div class="card-body">
+                    <h5>@Loc["Home.SupportDescription"]</h5>
+                    <a href="/Home/About" class="btn btn-primary btn-lg btn-action mt-3">@Loc["Home.Support"]</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 4rem;">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body card-body-commit">
+                    <p>@Loc["Home.Commitment"]</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <a href="@Url.Action("Index", "ChuyenDeNuRegister")" class="btn btn-primary btn-lg">
+                <i class="fas fa-user-plus"></i> @Loc["Home.RegisterWomenSpecialized"]
+            </a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+    $(document).ready(function () {
+        //showModalLogin('Login','modal-md');
+	});
+    </script>
+}
+<style>
+.card {
+    height: 100%;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 150px;
+}
+.btn-action {
+    width: 140px;
+    align-self: center;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+.card-body-commit {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: unset;
+    height: auto;
+    line-height: 1.4;
+    font-size: 1rem;
+}
+</style>
+
+

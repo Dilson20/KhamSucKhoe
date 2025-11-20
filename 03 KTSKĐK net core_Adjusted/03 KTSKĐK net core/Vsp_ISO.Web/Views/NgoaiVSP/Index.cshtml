@@ -1,0 +1,85 @@
+﻿@using System.Globalization;
+@using System.Linq;
+<div class="container">
+    <div class="row" style="margin-bottom: 80px"></div>
+    <h2 class="d-flex justify-content-center">@Loc["Out.Vsp.Informationonmedicalexamination"]</h2>
+   
+
+    <div class="row">
+        <div class="col-10">
+            <h4>@Loc["OutVsp.Info"]</h4>
+            <a class="btn btn-primary" asp-action="CreateDocument_BH" asp-controller="NgoaiVSP" style="margin-bottom: 10px">@Loc["OutVsp.AddNew"]</a>
+        </div>
+        <div class="col-2 text-end">
+            <a class="btn btn-warning" asp-action="MainPage" asp-controller="Home" style="margin-bottom: 10px">@Loc["OutVsp.BacktoHomne"]</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+        <h4>@Loc["OutVsp.HistoryRegister"]</h4>
+        </div>
+    </div>
+    <div class="row">
+        @if (Model != null && Model.Count > 0)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">@Loc["OutVsp.Hospital"]</th>
+                        <th scope="col">@Loc["OutVsp.Info"]</th>
+                        <th scope="col">@Loc["OutVsp.StartDate"]</th>
+                        <th scope="col">@Loc["OutVsp.EndDate"]</th>
+                        <th scope="col">@Loc["OutVsp.TypeOfTreatment"]</th>
+                        <th scope="col">@Loc["OutVsp.TypeOfKCB"]</th>
+                        <th scope="col">@Loc["OutVsp.TTYTNote"]</th>
+                        <th scope="col">@Loc["OutVsp.TTYTResult"]</th>
+                        <th scope="col">@Loc["OutVsp.TTYTOptions"]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr> 
+                            <td>@item?.TenBenhVien</td>
+                            <td>@item?.ThongTin</td>
+                            <td>@item?.NgayBatDauKham?.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)</td>
+                            <td>@item?.NgayKetThucKham?.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)</td>
+                            <td>@item?.LoaiHinhDieuTri</td>
+                            <td>@item?.HinhThucKCB</td>
+                            <td>@item?.NoteByDoctor</td>
+                            <td>@item?.Status</td>
+                            <td>
+                                <a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover" data-bs-toggle="tooltip" data-bs-placement="top"
+                                   title="" data-bs-original-title="@Loc["OutVsp.Edit"]" asp-action="UpdateDocument_BH" asp-controller="NgoaiVSP" asp-route-id="@item.Id">
+                                    <span class="icon" >
+                                        <i class="fa fa-pencil-alt text-primary"  role="button"></i>
+
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div class="col-12">
+                <div class="alert alert-info">
+                    <i class="fa fa-info-circle"></i>
+                    @Loc["OutVsp.NoMedicalRecords"]
+                </div>
+            </div>
+        }
+    </div>
+    
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            
+        });
+       
+    </script>
+}

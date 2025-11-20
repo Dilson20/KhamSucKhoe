@@ -1,0 +1,59 @@
+﻿<link href="~/dist/css/styleksk.css" rel="stylesheet" asp-append-version="true" />
+<div class="row" style="margin-bottom: 50px"></div>
+<div class="container home">
+    <div class="row" style="margin-bottom:30px">
+        <div class="col-12">
+            <h4 class="text-secondary m-0">@Loc["About.Title"]</h4>
+        </div>
+    </div>
+    
+    <div class="row g-4" style="display: flex; margin-bottom: 4rem;">
+        <!-- Hướng dẫn sử dụng -->
+        <div class="col-md-6 d-flex">
+            <div class="card w-100 shadow-sm">
+                <div class="card-header" style="background-color: #22c55e; color: white;">
+                    <h5 class="mb-0"><i class="fas fa-book me-2"></i> @Loc["About.UserGuide"]</h5>
+                </div>
+                <div class="card-body">
+                    <p class="mb-3">@Loc["About.DownloadDescription"]</p>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="~/Documents/Hướng dẫn sử dụng KhamSucKhoe.docx" class="btn btn-primary" download>
+                            <img src="~/dist/img/vietnam.png" alt="VN" style="width: 30px; height: 27px; margin-right: 8px;" /> @Loc["About.DownloadButtonVN"]
+                        </a>
+                        <a href="~/Documents/Hướng dẫn sử dụng KhamSucKhoe - Ru.docx" class="btn btn-primary" download>
+                            <img src="~/dist/img/russia.png" alt="RU" style="width: 30px; height: 27px; margin-right: 8px;" /> @Loc["About.DownloadButtonRU"]
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thông tin liên hệ -->
+        <div class="col-md-6 d-flex">
+            <div class="card w-100 shadow-sm">
+                <div class="card-header" style="background-color: #22c55e; color: white;">
+                    <h5 class="mb-0"><i class="fas fa-user-md me-2"></i> @Loc["About.ContactInfo"]</h5>
+                </div>
+                <div class="card-body">
+                    <h6 style="color: #22c55e; margin-bottom: 0.5rem;">@Loc["About.Medical"]</h6>
+                    <p class="text-secondary m-0"><strong>@Loc["About.PersonInCharge"]</strong> Nguyễn Thị Phi, VSP</p>
+                    <p class="mb-1"><strong>@Loc["About.Phone"]</strong> 8487</p>
+                    <p class="mb-0"><strong>@Loc["About.Email"]</strong> phint.mc@vietsov.com.vn</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.card {
+    height: 100%;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    min-height: 200px;
+}
+</style>

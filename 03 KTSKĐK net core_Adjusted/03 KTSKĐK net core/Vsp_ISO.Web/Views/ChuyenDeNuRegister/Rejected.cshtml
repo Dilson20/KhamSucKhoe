@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Đăng ký bị từ chối";
+}
+
+<div class="container">
+    <div class="row" style="margin-bottom: 60px"></div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card border-danger">
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0">Đăng ký bị từ chối</h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-danger">
+                        <h5>Rất tiếc!</h5>
+                        <p>Đăng ký của bạn đã bị từ chối. Vui lòng liên hệ với quản trị viên để biết thêm chi tiết.</p>
+                    </div>
+                    <div class="text-center">
+                        <a asp-action="Index" asp-controller="Home" class="btn btn-primary">Về trang chủ</a>
+                        <a asp-action="Index" asp-controller="ChuyenDeNuRegister" class="btn btn-secondary">Đăng ký lại</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .alert {
+        border-radius: 8px;
+    }
+    
+    .btn {
+        border-radius: 6px;
+        font-weight: 500;
+    }
+    
+    .card-header h3 {
+        font-weight: 600;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+</style> 

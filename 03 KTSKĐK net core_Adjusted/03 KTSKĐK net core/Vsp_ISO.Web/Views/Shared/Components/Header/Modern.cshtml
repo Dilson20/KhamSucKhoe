@@ -1,0 +1,135 @@
+@{
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Localization;
+@using VSP_HealthExam.Web.Entity
+	@inject SignInManager<AppUser> SignInManager
+	@inject UserManager<AppUser> UserManager
+	@inject IStringLocalizer<SharedResource> Loc
+}
+
+<!-- Modern Header -->
+<header class="modern-header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand" asp-action="MainPage" asp-controller="Home">
+                <div class="brand-logo">
+                    <img src="~/dist/img/logo.png" alt="VSP Logo" width="40" height="40" />
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">VIETSOVPETRO</span>
+                    <span class="brand-subtitle">@Loc["Header.HealthSystem"]</span>
+                </div>
+            </a>
+
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="Index" asp-controller="Home">
+                            <i class="fas fa-home"></i>
+                            <span>@Loc["Header.Home"]</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="header-contact">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>@Loc["Header.Hotline"]</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>@Loc["Header.Address"]</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <span>@Loc["Header.WorkingHours"]</span>
+                </div>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Action Buttons -->
+            <div class="navbar-nav ms-auto">
+                    
+                    @if (Context.User.Identity.IsAuthenticated)
+                    {
+                        var user = await UserManager?.GetUserAsync(User);
+                        var displayName = user?.FullName;
+                        var danhSo = user?.DanhSo;
+                        
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle user-menu" href="#" role="button" aria-expanded="false">
+                                <div class="user-avatar">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                                <div class="user-info">
+                                    <span class="user-name">@displayName</span>
+                                    <span class="user-id">@danhSo</span>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item text-danger" href="@Url.Action("Logout", "Account")">
+                                    <i class="fas fa-sign-out-alt"></i> @Loc["Header.Logout"]
+                                </a></li>
+                            </ul>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="nav-item">
+                            <a class="btn btn-primary" asp-action="Login" asp-controller="Account">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <span>@Loc["Header.Login"]</span>
+                            </a>
+                        </div>
+                    }
+
+                    <!-- Language Selector -->
+                    <div class="nav-item language-selector">
+                        @Html.Partial("_SetLanguagePartial")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Simple dropdown toggle without Bootstrap dependency
+    var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    
+    dropdownToggles.forEach(function(toggle) {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            var dropdownMenu = this.nextElementSibling;
+            
+            // Close other dropdowns
+            document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+                if (menu !== dropdownMenu) {
+                    menu.classList.remove('show');
+                }
+            });
+            
+            // Toggle current dropdown
+            dropdownMenu.classList.toggle('show');
+        });
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+                menu.classList.remove('show');
+            });
+        }
+    });
+});
+</script>

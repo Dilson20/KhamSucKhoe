@@ -1,0 +1,72 @@
+﻿@using VSP_HealthExam.Web.ViewModels
+@model LoginViewModel
+@{
+    Layout = "_Layout_Partial";
+}
+<form id="loginfrm" class="form-horizontal ng-pristine ng-valid" onsubmit="submitLoginHandler(this)" method="post">
+    <div class="form-group">
+        <label asp-for="DanhSo">Danh số/ Табельный номер </label>
+        <div class="imput-group">
+            <span class="input-affix-wrapper">
+                <span class="input-prefix"><i class="fa fa-user"></i></span>
+                <input type="text" asp-for="DanhSo" placeholder="Danh So" class="form-control">
+            </span>
+        </div>
+        <span asp-validation-for="DanhSo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <div class="imput-group">
+            <span class="input-affix-wrapper">
+                <span class="input-prefix"><i class="fa fa-key"></i></span>
+                <input type="password" class="form-control" asp-for="Password">
+            </span>
+        </div>
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+    <div class="form-group">
+        <button type="submit" id="btnSubmit" class="btn btn-primary">Login</button>
+    </div>
+</form>
+<script>
+    $("#_returnURL").attr("value", window.location.href);
+        submitLoginHandler = function (form) {
+        event.preventDefault();
+        if ($(form).valid()) {
+            $("#btnSubmit").attr("disabled", true);
+            $("#btnSubmit").append('<span class="spinner-border spinner-border-sm ml-2"></span>');
+            $.ajax({
+                url: '/Account/Login',
+                type: 'POST',
+                data: $(form).serialize(),
+                success: function (res) {
+                    if (res.success === true) {
+                        $("#mainModal .modal-body").html('');
+                        $("#mainModal").modal('hide');
+                        $("#btnSubmit").attr("disabled", false);
+                        $("#btnSubmit").children("span").remove();
+                        // Role-based redirect
+                        var redirectUrl = '/Home/Mainpage';
+                        location.href = redirectUrl;
+                    } else {
+                        var errorMessage = '<div class="alert alert-danger">' + $('<div>').text(res.error).html() + '</div>';
+                        console.log(errorMessage);
+                        $("#mainModal .modal-body").append(errorMessage);
+                        $("[asp-validation-summary='ModelOnly']").html(errorMessage);
+                        $("#mainModal").modal('show');
+                        $("#btnSubmit").attr("disabled", false);
+                        $("#btnSubmit").children("span").remove();
+                    }
+                },
+                error: function (err) {
+                    console.log('AJAX Error:', err);
+                    $("#btnSubmit").attr("disabled", false);
+                    $("#btnSubmit").children("span").remove();
+                }
+            });
+        }
+    };
+</script>

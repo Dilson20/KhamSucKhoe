@@ -1,0 +1,101 @@
+﻿@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Mvc;
+@using Microsoft.Extensions.Options
+
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+    var currentCulture = requestCulture?.RequestCulture.Culture.Name ?? "vi";
+}
+
+<div class="language-dropdown">
+    <button class="language-toggle" type="button" id="languageToggle">
+        <span class="flag-icon" id="currentFlag">
+            @if (currentCulture == "vi")
+            {
+                <span class="flag-emoji">🇻🇳</span>
+            }
+            else if (currentCulture == "ru")
+            {
+                <span class="flag-emoji">🇷🇺</span>
+            }
+            else
+            {
+                <span class="flag-emoji">🇻🇳</span>
+            }
+        </span>
+        <span class="language-text" id="currentLanguage">
+            @if (currentCulture == "vi")
+            {
+                <span>Tiếng Việt</span>
+            }
+            else if (currentCulture == "ru")
+            {
+                <span>Русский</span>
+            }
+            else
+            {
+                <span>Tiếng Việt</span>
+            }
+        </span>
+        <i class="fas fa-chevron-down"></i>
+    </button>
+    
+    <div class="language-menu" id="languageMenu">
+        <form asp-controller="Account" asp-action="SetLanguage" asp-route-returnUrl="@returnUrl" method="post" class="language-form">
+            <input type="hidden" name="culture" id="cultureInput" value="@currentCulture" />
+            
+            <div class="language-option" data-culture="vi">
+                <span class="flag-emoji">🇻🇳</span>
+                <span class="language-text">Tiếng Việt</span>
+            </div>
+            
+            <div class="language-option" data-culture="ru">
+                <span class="flag-emoji">🇷🇺</span>
+                <span class="language-text">Русский</span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--Fill login modal here-->
+@await Html.PartialAsync("_GlobalModal")
+<!--end login modal-->
+
+<script src="~/vendors/jquery/dist/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    // Toggle language dropdown
+    $('#languageToggle').click(function(e) {
+        e.preventDefault();
+        $('#languageMenu').toggleClass('show');
+        $('.language-dropdown').toggleClass('active');
+    });
+    
+    // Handle language selection
+    $('.language-option').click(function() {
+        var culture = $(this).data('culture');
+        var flag = $(this).find('.flag-emoji').html();
+        var text = $(this).find('.language-text').text();
+        
+        // Update display
+        $('#currentFlag').html(flag);
+        $('#currentLanguage').text(text);
+        
+        // Submit form
+        $('#cultureInput').val(culture);
+        $('.language-form').submit();
+    });
+    
+    // Close dropdown when clicking outside
+    $(document).click(function(e) {
+        if (!$(e.target).closest('.language-dropdown').length) {
+            $('#languageMenu').removeClass('show');
+            $('.language-dropdown').removeClass('active');
+        }
+    });
+});
+</script>
