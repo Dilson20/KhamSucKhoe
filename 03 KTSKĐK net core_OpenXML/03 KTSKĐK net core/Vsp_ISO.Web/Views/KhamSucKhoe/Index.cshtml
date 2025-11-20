@@ -1,0 +1,541 @@
+﻿@using System.Globalization;
+@model VSP_HealthExam.Web.Models.KhamSucKhoe.View_NhanVien_All
+@inject IStringLocalizer<SharedResource> Loc
+
+<div class="container">
+
+    <div class="row" style="margin-bottom: 80px"></div>
+    <h2 class="d-flex justify-content-center">@Loc["KSK.Title"]</h2>
+    <div class="row">
+        <div class="col-10">
+            <a class="btn btn-warning" asp-action="MainPage" asp-controller="Home"
+                style="margin-bottom: 10px">@Loc["OutVsp.BacktoHomne"]</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4>@Loc["KSK.RegistrationInfo"]</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <ul class="list-ul ">
+                @if (Model != null)
+                {
+                    <li>
+                        @Loc["KSK.FullName"]: <strong>@Model?.HoTen</strong>
+                    </li>
+                    <li>
+                        @Loc["KSK.EmployeeNumber"]: <strong>@Model?.DanhSo</strong>
+                    </li>
+                    <li>
+                        @Loc["KSK.Email"]: <strong>@Model?.Email</strong>
+                    </li>
+                    <li>
+                        @Loc["KSK.Department"]: <strong>@(CultureInfo.CurrentUICulture.Name == "ru" ? Model?.DonVi_ru :
+                            Model?.DonVi)</strong>
+                </li>
+                <li>
+                    @Loc["KSK.Gender"]: <strong>@(Model?.GioiTinh == "Nam" ? Loc["KSK.Gender_Male"] : (Model?.GioiTinh
+                                                == "Nữ" ? Loc["KSK.Gender_Female"] : Model?.GioiTinh))</strong>
+                    </li>
+                    <li> @Loc["KSK.EmployeeGroup"]:
+                        <strong>
+                            @string.Join(";", Model.NhomNhanVien_id.Select(item => item.ToString()))
+                        </strong>
+                    </li>
+                }
+                else
+                {
+                    <li>@Loc["KSK.NoRegistrationData"]</li>
+                }
+            </ul>
+        </div>
+    </div>
+
+    <!-- Lịch đã đăng ký -->
+    <div class="row" id="lichDaDangKy">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">@Loc["KSK.RegisteredSchedule"]</h5>
+                </div>
+                <div class="card-body">
+                    <div id="danhSachLichDaDangKy">
+                        <div class="text-center">
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">@Loc["KSK.Loading"]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form đăng ký KSK -->
+    <div class="row" id="dangKyForm">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">@Loc["KSK.HealthCheckRegistration"]</h5>
+                </div>
+                <div class="card-body">
+                    <form id="formDangKy">
+                        @Html.AntiForgeryToken()
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="loaiKhamSelect" class="form-label">@Loc["KSK.ExaminationType"]:</label>
+                                    <select class="form-select" id="loaiKhamSelect" name="LoaiKham" required>
+                                        <option value="">@Loc["KSK.SelectExaminationType"]</option>
+                                        @if (Model != null && Model.NhomNhanVien_id != null)
+                                        {
+                                            @foreach (var nhomId in Model.NhomNhanVien_id)
+                                            {
+                                                var tenNhom = nhomId switch
+                                                {
+                                                    1 => Loc["KSK.ExaminationType_Periodic"],
+                                                    2 => Loc["KSK.ExaminationType_Leadership"],
+                                                    3 => Loc["KSK.ExaminationType_WomenSpecialized"],
+                                                    4 => Loc["KSK.ExaminationType_Cardiovascular"],
+                                                    5 => Loc["KSK.ExaminationType_Vaccine"],
+                                                    6 => Loc["KSK.ExaminationType_HealthCheck"],
+                                                    _ => $"Nhóm {nhomId}"
+                                                };
+                                                <option value="@nhomId">@tenNhom</option>
+                                            }
+                                        }
+                                    </select>
+                                    <!-- Thông báo điều kiện cho nhóm khám sức khỏe -->
+                                    <div id="healthCheckCondition" class="alert alert-info mt-2" style="display: none;">
+                                        <i class="fas fa-info-circle"></i>
+                                        @Loc["KSK.HealthCheckConditionNote"]
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="lichKhamSelect" class="form-label">@Loc["KSK.SelectSchedule"]:</label>
+                                    <select class="form-select" id="lichKhamSelect" name="LichKhamSucKhoeId" required>
+                                        <option value="">@Loc["KSK.SelectScheduleOption"]</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3" id="adminNoteContainer" style="display: none;">
+                                    <label class="form-label">@Loc["KSK.AdminNote"]:</label>
+                                    <div class="alert alert-info" id="adminNoteText"
+                                        style="margin-top: 10px; padding: 10px; border: 1px solid #bee5eb; background-color: #d1ecf1; color: #0c5460; border-radius: 4px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="yeuCauDacBiet"
+                                        class="form-label">@Loc["KSK.SpecialRequirements"]:</label>
+                                    <textarea class="form-control" id="yeuCauDacBiet" name="YeuCauDacBiet" rows="3"
+                                        placeholder="@Loc["KSK.SpecialRequirementsPlaceholder"]"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="button" class="btn btn-primary" id="btnDangKy">
+                                    <i class="fas fa-save"></i> @Loc["KSK.Register"]
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thông báo kết quả -->
+    <div class="row">
+        <div class="col-12">
+            <div id="thongBaoDangKy" class="alert d-none" role="alert"></div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script>
+        function getCsrfToken() {
+            return $("input[name='__RequestVerificationToken']").val();
+        }
+        var loaiNhomDaDangKy = []; // Biến lưu danh sách loại nhóm đã đăng ký
+
+        $(document).ready(function () {
+            // Load danh sách loại nhóm đã đăng ký và lịch đã đăng ký khi trang load
+            loadLoaiNhomDaDangKy();
+            loadLichDaDangKy();
+
+            // Disable nút đăng ký ban đầu
+            $('#btnDangKy').prop('disabled', true);
+
+            // Kiểm tra điều kiện ban đầu
+            setTimeout(function () {
+                checkHealthCheckCondition();
+                // Đảm bảo không có option dư thừa
+                $('#loaiKhamSelect option[value=""][disabled]').not(':first').remove();
+            }, 1000);
+
+            // Xử lý khi chọn loại khám
+            $('#loaiKhamSelect').change(function () {
+                var loaiKhamId = $(this).val();
+
+                // KIỂM TRA ĐIỀU KIỆN: Nếu chọn nhóm khám sức khỏe (ID=6) mà chưa đăng ký lịch lấy mẫu máu
+                if (loaiKhamId == "6") {
+                    var daDangKyLayMauMau = loaiNhomDaDangKy.includes(1);
+                    if (!daDangKyLayMauMau) {
+                        showThongBao('@Loc["KSK.HealthCheckConditionMessage"]', false);
+                        $('#loaiKhamSelect').val(''); // Reset selection
+                        $('#lichKhamSelect').empty().append('<option value="">@Loc["KSK.SelectScheduleOption"]</option>');
+                        return;
+                    }
+                }
+
+                if (loaiKhamId) {
+                    loadLichKhamByLoai(loaiKhamId);
+                } else {
+                    $('#lichKhamSelect').empty().append('<option value="">@Loc["KSK.SelectScheduleOption"]</option>');
+                }
+                // Ẩn note khi đổi loại khám
+                $('#adminNoteContainer').hide();
+            });
+
+            // Xử lý khi chọn lịch khám
+            $('#lichKhamSelect').change(function () {
+                var selectedOption = $(this).find('option:selected');
+                var ghiChu = selectedOption.data('ghichu');
+                var selectedValue = $(this).val();
+
+                console.log('Selected option:', selectedOption);
+                console.log('Ghi chú:', ghiChu);
+                console.log('adminNoteContainer exists:', $('#adminNoteContainer').length);
+                console.log('adminNoteText exists:', $('#adminNoteText').length);
+
+                // Enable/disable nút đăng ký dựa trên việc có chọn lịch hay không
+                if (selectedValue && selectedValue !== '') {
+                    $('#btnDangKy').prop('disabled', false);
+                } else {
+                    $('#btnDangKy').prop('disabled', true);
+                }
+
+                if (ghiChu && ghiChu.trim() !== '') {
+                    $('#adminNoteText').text(ghiChu);
+                    $('#adminNoteContainer').show().css('display', 'block !important');
+                    console.log('Hiển thị note:', ghiChu);
+                    console.log('Container display style:', $('#adminNoteContainer').css('display'));
+                    console.log('Container HTML:', $('#adminNoteContainer').html());
+                } else {
+                    $('#adminNoteContainer').hide();
+                    console.log('Không có note, ẩn container');
+                }
+            });
+
+            // Xử lý đăng ký
+            $('#btnDangKy').click(function () {
+                var formData = {
+                    LichKhamSucKhoeId: parseInt($('#lichKhamSelect').val()),
+                    YeuCauDacBiet: $('#yeuCauDacBiet').val()
+                };
+
+                if (!formData.LichKhamSucKhoeId) {
+                    showThongBao('@Loc["KSK.PleaseSelectSchedule"]', false);
+                    return;
+                }
+
+                $.ajax({
+                    url: '@Url.Action("CreateNhanVienDangKy", "KhamSucKhoe")',
+                    type: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'RequestVerificationToken': getCsrfToken()
+                    },
+                    contentType: 'application/json',
+                    data: JSON.stringify(formData),
+                    success: function (response) {
+                        if (response.success) {
+                            showThongBao(response.message || '@Loc["KSK.RegistrationSuccess"]', true);
+                            $('#formDangKy')[0].reset();
+                            $('#lichKhamSelect').empty().append('<option value="">@Loc["KSK.SelectScheduleOption"]</option>');
+                            // Ẩn ghi chú khi đăng ký thành công
+                            $('#adminNoteContainer').hide();
+                            // Reset form và dropdown
+                            $('#loaiKhamSelect').val('');
+                            // Disable nút đăng ký sau khi reset
+                            $('#btnDangKy').prop('disabled', true);
+                            // Reset form
+                            $('#yeuCauDacBiet').val('');
+                            // Reload danh sách lịch đã đăng ký và loại nhóm đã đăng ký
+                            loadLichDaDangKy();
+                            loadLoaiNhomDaDangKy();
+
+                            // Nếu đã chọn loại khám trước đó, reload danh sách lịch khám
+                            var selectedLoaiKham = $('#loaiKhamSelect').val();
+                            if (selectedLoaiKham) {
+                                loadLichKhamByLoai(selectedLoaiKham);
+                            }
+                        } else {
+                            let msg = response.message || '@Loc["KSK.ErrorOccurred"]';
+                            if (response.errors && response.errors.length > 0) {
+                                msg += '<ul>' + response.errors.map(e => '<li>' + e + '</li>').join('') + '</ul>';
+                            }
+                            showThongBao(msg, false);
+                        }
+                    },
+                    error: function (xhr) {
+                        let msg = '@Loc["KSK.RegistrationError"]';
+                        if (xhr.responseJSON && xhr.responseJSON.message) {
+                            msg = xhr.responseJSON.message;
+                        }
+                        if (xhr.responseJSON && xhr.responseJSON.errors && xhr.responseJSON.errors.length > 0) {
+                            msg += '<ul>' + xhr.responseJSON.errors.map(e => '<li>' + e + '</li>').join('') + '</ul>';
+                        }
+                        showThongBao(msg, false);
+                    }
+                });
+            });
+
+            function loadLoaiNhomDaDangKy() {
+                $.ajax({
+                    url: '@Url.Action("GetLoaiNhomDaDangKy", "KhamSucKhoe")',
+                    type: 'GET',
+                    success: function (data) {
+                        console.log('Danh sách loại nhóm đã đăng ký:', data);
+                        loaiNhomDaDangKy = data || [];
+
+                        // Cập nhật dropdown loại khám để ẩn các loại đã đăng ký
+                        updateLoaiKhamDropdown();
+
+                        // Kiểm tra và cập nhật điều kiện khám sức khỏe
+                        checkHealthCheckCondition();
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Lỗi khi tải danh sách loại nhóm đã đăng ký:', error);
+                        loaiNhomDaDangKy = [];
+                        updateLoaiKhamDropdown();
+                    }
+                });
+            }
+
+            function updateLoaiKhamDropdown() {
+                // Xóa tất cả option "Bạn đã đăng ký tất cả loại khám" trước khi cập nhật
+                $('#loaiKhamSelect option[value=""][disabled]').remove();
+
+                // Ẩn các option đã đăng ký trong dropdown loại khám
+                $('#loaiKhamSelect option').each(function () {
+                    var optionValue = parseInt($(this).val());
+
+                    // Ẩn tất cả các nhóm đã đăng ký (1 lần 1 nhóm)
+                    if (loaiNhomDaDangKy.includes(optionValue)) {
+                        $(this).hide();
+                        $(this).prop('disabled', true);
+                    } else {
+                        $(this).show();
+                        $(this).prop('disabled', false);
+                    }
+                });
+
+                // KIỂM TRA ĐIỀU KIỆN: Nhóm khám sức khỏe (ID=6) chỉ được chọn sau khi đã đăng ký lịch lấy mẫu máu (ID=1)
+                var daDangKyLayMauMau = loaiNhomDaDangKy.includes(1); // Kiểm tra đã đăng ký lịch lấy mẫu máu chưa
+
+                if (!daDangKyLayMauMau) {
+                    // Nếu chưa đăng ký lịch lấy mẫu máu, disable nhóm khám sức khỏe (ID=6)
+                    $('#loaiKhamSelect option[value="6"]').each(function () {
+                        $(this).prop('disabled', true);
+                        $(this).addClass('text-muted');
+                        // Thêm tooltip hoặc text giải thích
+                        var originalText = $(this).text();
+                        if (!originalText.includes('(Cần đăng ký lịch lấy mẫu máu trước)')) {
+                            $(this).text(originalText + ' (Cần đăng ký lịch lấy mẫu máu trước)');
+                        }
+                    });
+                } else {
+                    // Nếu đã đăng ký lịch lấy mẫu máu, enable nhóm khám sức khỏe
+                    $('#loaiKhamSelect option[value="6"]').each(function () {
+                        $(this).prop('disabled', false);
+                        $(this).removeClass('text-muted');
+                        // Khôi phục text gốc
+                        var text = $(this).text();
+                        if (text.includes('(Cần đăng ký lịch lấy mẫu máu trước)')) {
+                            $(this).text(text.replace(' (Cần đăng ký lịch lấy mẫu máu trước)', ''));
+                        }
+                    });
+                }
+
+                // Cập nhật hiển thị thông báo điều kiện
+                checkHealthCheckCondition();
+
+                // Kiểm tra xem còn option nào có thể chọn không (không tính option rỗng đầu tiên)
+                var availableOptions = $('#loaiKhamSelect option:visible').not('[value=""]').not('[disabled]');
+                if (availableOptions.length === 0) {
+                    // Chỉ thêm thông báo nếu chưa có
+                    if ($('#loaiKhamSelect option[value=""][disabled]').length === 0) {
+                        $('#loaiKhamSelect').append('<option value="" disabled>@Loc["KSK.AllTypesRegistered"]</option>');
+                    }
+                }
+            }
+
+            function loadLichDaDangKy() {
+                $.ajax({
+                    url: '@Url.Action("GetLichDaDangKy", "KhamSucKhoe")',
+                    type: 'GET',
+                    success: function (data) {
+                        console.log('Dữ liệu lịch đã đăng ký:', data);
+
+                        var html = '';
+                        if (data && data.length > 0) {
+                            html = '<div class="table-responsive"><table class="table table-striped">';
+                            html += '<thead><tr>';
+                            html += '<th>@Loc["KSK.STT"]</th>';
+                            html += '<th>@Loc["KSK.ExaminationTypeHeader"]</th>';
+                            html += '<th>@Loc["KSK.Department"]</th>'; // ← ADD THIS LINE
+                            html += '<th>@Loc["KSK.ExaminationTime"]</th>';
+                            html += '<th>@Loc["KSK.SpecialRequirementsHeader"]</th>';
+                            html += '<th>@Loc["KSK.AdminNote"]</th>';
+                            html += '<th>@Loc["KSK.Status"]</th>';
+                            html += '</tr></thead><tbody>';
+
+                            data.forEach(function (lich, index) {
+                                console.log('Lich data:', lich);
+                                var thoiGianBatDau = new Date(lich.thoiGianBatDau);
+                                var thoiGianKetThuc = new Date(lich.thoiGianKetThuc);
+
+                                html += '<tr>';
+                                html += '<td>' + (index + 1) + '</td>';
+                                html += '<td><span class="badge bg-primary">' + lich.tenLoaiNhom + '</span></td>';
+                                html += '<td>' + (lich.tenDonVi || '@Loc["KSK.NoDepartmentInfo"]') + '</td>'; // ← ADD THIS LINE (use tenDonVi not donVi)
+                                html += '<td>' +
+                                    thoiGianBatDau.toLocaleString('vi-VN', {
+                                        year: 'numeric',
+                                        month: '2-digit',
+                                        day: '2-digit',
+                                        hour: '2-digit',
+                                        minute: '2-digit'
+                                    }) +
+                                    ' - ' +
+                                    thoiGianKetThuc.toLocaleTimeString('vi-VN', {
+                                        hour: '2-digit',
+                                        minute: '2-digit'
+                                    }) + '</td>';
+                                html += '<td>' + (lich.yeuCauDacBiet || '@Loc["KSK.NoSpecialRequirements"]') + '</td>';
+                                html += '<td>' + (lich.ghiChu || '@Loc["KSK.NoSpecialRequirements"]') + '</td>';
+                                html += '<td><span class="badge bg-success">' + (lich.trangThai || '@Loc["KSK.Status_Registered"]') + '</span></td>';
+                                html += '</tr>';
+                            });
+
+                            html += '</tbody></table></div>';
+                        } else {
+                            html = '<div class="alert alert-info">@Loc["KSK.NoScheduleRegistered"]</div>';
+                        }
+
+                        $('#danhSachLichDaDangKy').html(html);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Lỗi khi tải lịch đã đăng ký:', error);
+                        $('#danhSachLichDaDangKy').html('<div class="alert alert-danger">@Loc["KSK.CannotLoadRegisteredSchedule"]</div>');
+                    }
+                });
+            }
+
+            function loadLichKhamByLoai(loaiKhamId) {
+                var donViId = @(Model?.ID_DonVi ?? 0);
+                console.log('Loading lịch khám cho loại:', loaiKhamId, 'đơn vị:', donViId);
+
+                if (donViId > 0) {
+                    $.ajax({
+                        url: '@Url.Action("GetLichKhamByDonVi", "KhamSucKhoe")',
+                        type: 'GET',
+                        data: { donViId: donViId },
+                        success: function (data) {
+                            console.log('Dữ liệu lịch khám nhận được:', data);
+
+                            $('#lichKhamSelect').empty();
+                            $('#lichKhamSelect').append('<option value="">@Loc["KSK.SelectScheduleOption"]</option>');
+
+                            // Lọc lịch khám theo loại khám
+                            var filteredData = data.filter(function (lich) {
+                                console.log('Kiểm tra lịch:', lich.id, 'loaiNhom:', lich.loaiNhom, 'so sánh với:', loaiKhamId);
+                                return lich.loaiNhom == parseInt(loaiKhamId);
+                            });
+
+                            console.log('Dữ liệu đã lọc:', filteredData);
+
+                            // Lọc chỉ lịch còn chỗ trống
+                            var availableData = filteredData.filter(function (lich) {
+                                return lich.soSlotTrong > 0;
+                            });
+
+                            availableData.forEach(function (lich) {
+                                console.log('Lich object:', lich);
+                                console.log('Ghi chú của lịch:', lich.ghiChu);
+
+                                var thoiGianBatDau = new Date(lich.thoiGianBatDau);
+                                var thoiGianKetThuc = new Date(lich.thoiGianKetThuc);
+                                var option = '<option value="' + lich.id + '" data-ghichu="' + (lich.ghiChu || '') + '">' +
+                                    thoiGianBatDau.toLocaleString('vi-VN', {
+                                        year: 'numeric',
+                                        month: '2-digit',
+                                        day: '2-digit',
+                                        hour: '2-digit',
+                                        minute: '2-digit'
+                                    }) +
+                                    ' - ' +
+                                    thoiGianKetThuc.toLocaleTimeString('vi-VN', {
+                                        hour: '2-digit',
+                                        minute: '2-digit'
+                                    }) +
+                                    ' (chỗ: ' + lich.soSlotTrong + ' chỗ)</option>';
+                                $('#lichKhamSelect').append(option);
+                            });
+
+                            if (availableData.length === 0) {
+                                if (filteredData.length === 0) {
+                                    $('#lichKhamSelect').append('<option value="" disabled>@Loc["KSK.NoScheduleForType"]</option>');
+                                } else {
+                                    $('#lichKhamSelect').append('<option value="" disabled>Tất cả lịch khám đã hết chỗ</option>');
+                                }
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            console.error('Lỗi khi tải lịch khám:', error);
+                            alert('@Loc["KSK.CannotLoadSchedule"]');
+                        }
+                    });
+                } else {
+                    console.log('Không có donViId:', donViId);
+                    $('#lichKhamSelect').empty().append('<option value="" disabled>@Loc["KSK.NoDepartmentInfo"]</option>');
+                }
+            }
+
+            function checkHealthCheckCondition() {
+                var daDangKyLayMauMau = loaiNhomDaDangKy.includes(1);
+                var daDangKyKhamSucKhoe = loaiNhomDaDangKy.includes(6);
+
+                // Chỉ hiển thị thông báo điều kiện khi chưa đăng ký lịch lấy mẫu máu và chưa đăng ký khám sức khỏe
+                if (!daDangKyLayMauMau && !daDangKyKhamSucKhoe) {
+                    $('#healthCheckCondition').show();
+                } else {
+                    $('#healthCheckCondition').hide();
+                }
+            }
+
+            function showThongBao(message, isSuccess) {
+                var alertDiv = $('#thongBaoDangKy');
+                alertDiv.removeClass('d-none alert-success alert-danger');
+                alertDiv.addClass(isSuccess ? 'alert-success' : 'alert-danger');
+                alertDiv.html(message);
+                alertDiv.show();
+                setTimeout(function () {
+                    alertDiv.fadeOut(500, function () {
+                        alertDiv.addClass('d-none').removeClass('alert-success alert-danger').html('');
+                    });
+                }, 5000);
+            }
+        });
+    </script>
+}

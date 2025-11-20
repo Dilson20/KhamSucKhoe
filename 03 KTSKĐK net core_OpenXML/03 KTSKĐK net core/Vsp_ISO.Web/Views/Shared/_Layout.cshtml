@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="@System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VSP Health Check-up System</title>
+	
+	<!-- Favicon -->
+	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%234CAF50'>H</text></svg>">
+	
+	<!-- Google Fonts - Inter -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" crossorigin="anonymous">
+	
+	<!-- Modern CSS -->
+	<link href="~/dist/css/modern-style.css" rel="stylesheet" type="text/css" asp-append-version="true" />
+	<link href="~/dist/css/site.css" rel="stylesheet" type="text/css" asp-append-version="true" />
+	
+	<!-- Bootstrap CSS -->
+    <link href="/vendors/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <!-- Font Awesome -->
+    <link href="~/dist/css/font-awesome.min.css" rel="stylesheet" />
+    
+    <!-- jQuery -->
+	<script src="~/vendors/jquery/dist/jquery.min.js"></script>
+	
+	@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
+	<meta name="csrf-token" content="@Antiforgery.GetAndStoreTokens(Context).RequestToken" />
+</head>
+<body>
+
+	<!-- Modern Wrapper -->
+	<div class="modern-wrapper">
+		<!-- Modern Header -->
+		@Html.Partial("Components/Header/Modern")
+		<!-- /Modern Header -->
+		
+		<!-- Main Content -->
+		<main class="main-content">
+			<div class="container-fluid">
+				@RenderBody()
+			</div>
+		</main>
+		<!-- /Main Content -->
+		<!-- Modal -->
+		<div class="modal fade" id="mainModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+			 aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title"></h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<!--body here-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Add Category -->
+		<div id="add_new_menu" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-md" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<div id="modal-body-form">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Add Category -->
+
+	</div>
+	<!-- /Wrapper -->
+	<!-- jQuery -->
+    <script src="~/vendors/jquery/dist/jquery.min.js"></script>
+
+	<!-- Bootstrap Core JS -->
+
+    <script src="~/vendors/bootstrap/js/bootstrap.js"></script>
+    <script src="~/vendors/bootstrap/js/bootstrap.min.js"></script>
+    
+	<!-- FeatherIcons JS -->
+	<script src="~/dist/js/feather.min.js"></script>
+
+	<!-- Init JS -->
+	@* <script src="~/dist/js/init.js"></script> *@
+
+	<script src="~/dist/js/site.js" asp-append-version="true"></script>
+	@RenderSection("Scripts", required: false)
+
+</body>
+</html>
+
+
+
+
+
+

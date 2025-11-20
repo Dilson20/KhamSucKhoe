@@ -1,0 +1,1241 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\services\\khamsuckhoe\\i_khamsuckhoe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\services\\khamsuckhoe\\i_khamsuckhoe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\services\\baohiem\\i_document_bh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\services\\baohiem\\i_document_bh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\views\\khamsuckhoe\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\views\\khamsuckhoe\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\entity\\dbinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\entity\\dbinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\controllers\\chuyendenuregistercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\controllers\\chuyendenuregistercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\models\\khamsuckhoe\\ksk_nhanvien_dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\models\\khamsuckhoe\\ksk_nhanvien_dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\wwwroot\\vendors\\bootstrap-datepicker\\bootstrap-datepicker.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\wwwroot\\vendors\\bootstrap-datepicker\\bootstrap-datepicker.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\wwwroot\\vendors\\datatables.net\\datatables.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\wwwroot\\vendors\\datatables.net\\datatables.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\views\\account\\_changepasswordadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\views\\account\\_changepasswordadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\viewmodels\\changepasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\viewmodels\\changepasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\viewmodels\\register\\chuyendenuregister_viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\viewmodels\\register\\chuyendenuregister_viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\models\\khamsuckhoe\\ksk_loainhom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\models\\khamsuckhoe\\ksk_loainhom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\models\\khamsuckhoe\\departmenttree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\models\\khamsuckhoe\\departmenttree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\models\\khamnghenghiep\\khamnghenghiep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\models\\khamnghenghiep\\khamnghenghiep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\migrations\\20251118030416_add_khamsuckhoe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\migrations\\20251118030416_add_khamsuckhoe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\migrations\\20250725013028_deletethutu3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\migrations\\20250725013028_deletethutu3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\migrations\\20250725012930_removethututrongngaycolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\migrations\\20250725012930_removethututrongngaycolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\migrations\\20250725012622_deletethutu2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\migrations\\20250725012622_deletethutu2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\migrations\\20250725012516_deletethutu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\migrations\\20250725012516_deletethutu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\migrations\\20250723014708_edit_lichkham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\migrations\\20250723014708_edit_lichkham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\migrations\\20250715070238_add_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\migrations\\20250715070238_add_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\entity\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\entity\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\entity\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\entity\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\editmodels\\document_bh_editmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\editmodels\\document_bh_editmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\editmodels\\ksk_nhanvien_dangky_editmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\editmodels\\ksk_nhanvien_dangky_editmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\controllers\\ngoaivspcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\controllers\\ngoaivspcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\viewmodels\\document_bh_viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\viewmodels\\document_bh_viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\viewmodels\\emailnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\viewmodels\\emailnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\views\\home\\mainpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\views\\home\\mainpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\sharedresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\sharedresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\viewmodels\\userinforviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\viewmodels\\userinforviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\viewmodels\\userroleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\viewmodels\\userroleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\ultility\\securityheadersmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\ultility\\securityheadersmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\services\\imailservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\services\\imailservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\services\\ijwtmanagerservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\services\\ijwtmanagerservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\editmodels\\lich_ksk_editmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\editmodels\\lich_ksk_editmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\wwwroot\\vendors\\bootstrap\\css\\bootstrap-grid.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\wwwroot\\vendors\\bootstrap\\css\\bootstrap-grid.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\viewmodels\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\viewmodels\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\controllers\\khamsuckhoecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\controllers\\khamsuckhoecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\models\\khamsuckhoe\\view_nhanvien_all.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\models\\khamsuckhoe\\view_nhanvien_all.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\models\\khamsuckhoe\\lichkhamsuckhoe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\models\\khamsuckhoe\\lichkhamsuckhoe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\models\\tokens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\models\\tokens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\models\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\models\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\models\\register\\chuyendenuregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\models\\register\\chuyendenuregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\viewmodels\\ksk_nhanvien_viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\viewmodels\\ksk_nhanvien_viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\views\\khamsuckhoe\\viewnhanvienall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\views\\khamsuckhoe\\viewnhanvienall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\migrations\\20251118030416_add_khamsuckhoe.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\migrations\\20251118030416_add_khamsuckhoe.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\models\\khamsuckhoe\\view_danhba_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\models\\khamsuckhoe\\view_danhba_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\views\\khamsuckhoe\\index_nuchuyende.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\views\\khamsuckhoe\\index_nuchuyende.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\views\\khamsuckhoe\\ksk_adminindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\views\\khamsuckhoe\\ksk_adminindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\views\\ngoaivsp\\adminindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\views\\ngoaivsp\\adminindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\views\\shared\\components\\header\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\views\\shared\\components\\header\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\viewmodels\\userrolegroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\viewmodels\\userrolegroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\models\\baohiem\\filesattachment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\models\\baohiem\\filesattachment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\models\\baohiem\\document_bh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\models\\baohiem\\document_bh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\KhamSucKhoe_ViewNhanVienAll_Implementation_Guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:KhamSucKhoe_ViewNhanVienAll_Implementation_Guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\wwwroot\\js\\kham-suc-khoe-view-nhan-vien.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:wwwroot\\js\\kham-suc-khoe-view-nhan-vien.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\POSTMAN_TESTING_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:POSTMAN_TESTING_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|c:\\users\\vinhtv\\downloads\\03 ktsk\u0111k net core\\03 ktsk\u0111k net core\\vsp_iso.web\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16EC9BC3-DF4B-4143-9D80-FDF9F753C867}|VSP_ISO.Web\\VSP_HealthExam.Web.csproj|solutionrelative:vsp_iso.web\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\POSTMAN_QUICK_START.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:POSTMAN_QUICK_START.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\README_TESTING_PACKAGE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README_TESTING_PACKAGE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\POSTMAN_ARCHITECTURE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:POSTMAN_ARCHITECTURE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\POSTMAN_EXECUTIVE_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:POSTMAN_EXECUTIVE_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\INDEX.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:INDEX.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\KhamSucKhoe_ViewNhanVienAll_Postman_Complete.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:KhamSucKhoe_ViewNhanVienAll_Postman_Complete.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 254,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "I_Document_BH.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Services\\BaoHiem\\I_Document_BH.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Services\\BaoHiem\\I_Document_BH.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Services\\BaoHiem\\I_Document_BH.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Services\\BaoHiem\\I_Document_BH.cs",
+              "ViewState": "AgIAACcBAAAAAAAAAAAwwDcBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T09:19:50.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DbInit.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Entity\\DbInit.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Entity\\DbInit.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Entity\\DbInit.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Entity\\DbInit.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvyIAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T06:59:06.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\appsettings.json",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\appsettings.json",
+              "RelativeToolTip": "Vsp_ISO.Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAhwA8AAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-17T06:59:31.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\KhamSucKhoe\\Index.cshtml",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Views\\KhamSucKhoe\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\KhamSucKhoe\\Index.cshtml",
+              "RelativeToolTip": "Vsp_ISO.Web\\Views\\KhamSucKhoe\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T07:52:55.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "I_KhamSucKhoe.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Services\\KhamSucKhoe\\I_KhamSucKhoe.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Services\\KhamSucKhoe\\I_KhamSucKhoe.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Services\\KhamSucKhoe\\I_KhamSucKhoe.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Services\\KhamSucKhoe\\I_KhamSucKhoe.cs",
+              "ViewState": "AgIAABYCAAAAAAAAAAAewA8CAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T08:44:15.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Program.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Program.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T06:55:36.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAiwCYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T06:55:45.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ChuyenDeNuRegisterController.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Controllers\\ChuyenDeNuRegisterController.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Controllers\\ChuyenDeNuRegisterController.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Controllers\\ChuyenDeNuRegisterController.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Controllers\\ChuyenDeNuRegisterController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T08:07:34.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAASwI4AAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T06:46:22.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "KSK_NhanVien_DangKy.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\KhamSucKhoe\\KSK_NhanVien_DangKy.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Models\\KhamSucKhoe\\KSK_NhanVien_DangKy.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\KhamSucKhoe\\KSK_NhanVien_DangKy.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Models\\KhamSucKhoe\\KSK_NhanVien_DangKy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:00:06.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "bootstrap-datepicker.min.css",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\wwwroot\\vendors\\bootstrap-datepicker\\bootstrap-datepicker.min.css",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\wwwroot\\vendors\\bootstrap-datepicker\\bootstrap-datepicker.min.css",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\wwwroot\\vendors\\bootstrap-datepicker\\bootstrap-datepicker.min.css",
+              "RelativeToolTip": "Vsp_ISO.Web\\wwwroot\\vendors\\bootstrap-datepicker\\bootstrap-datepicker.min.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-19T09:52:32.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "datatables.css",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\wwwroot\\vendors\\datatables.net\\datatables.css",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\wwwroot\\vendors\\datatables.net\\datatables.css",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\wwwroot\\vendors\\datatables.net\\datatables.css",
+              "RelativeToolTip": "Vsp_ISO.Web\\wwwroot\\vendors\\datatables.net\\datatables.css",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-19T09:52:23.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_ChangePasswordAdmin.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\Account\\_ChangePasswordAdmin.cshtml",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Views\\Account\\_ChangePasswordAdmin.cshtml",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\Account\\_ChangePasswordAdmin.cshtml",
+              "RelativeToolTip": "Vsp_ISO.Web\\Views\\Account\\_ChangePasswordAdmin.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T09:15:31.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ChuyenDeNuRegister_ViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\Register\\ChuyenDeNuRegister_ViewModel.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\ViewModels\\Register\\ChuyenDeNuRegister_ViewModel.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\Register\\ChuyenDeNuRegister_ViewModel.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\ViewModels\\Register\\ChuyenDeNuRegister_ViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T00:49:04.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ChangePasswordViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\ChangePasswordViewModel.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\ViewModels\\ChangePasswordViewModel.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\ChangePasswordViewModel.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\ViewModels\\ChangePasswordViewModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T09:04:33.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "KSK_LoaiNhom.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\KhamSucKhoe\\KSK_LoaiNhom.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Models\\KhamSucKhoe\\KSK_LoaiNhom.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\KhamSucKhoe\\KSK_LoaiNhom.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Models\\KhamSucKhoe\\KSK_LoaiNhom.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T09:19:13.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DepartmentTree.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\KhamSucKhoe\\DepartmentTree.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Models\\KhamSucKhoe\\DepartmentTree.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\KhamSucKhoe\\DepartmentTree.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Models\\KhamSucKhoe\\DepartmentTree.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA/wBoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T08:29:36.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "KhamNgheNghiep.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\KhamNgheNghiep\\KhamNgheNghiep.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Models\\KhamNgheNghiep\\KhamNgheNghiep.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\KhamNgheNghiep\\KhamNgheNghiep.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Models\\KhamNgheNghiep\\KhamNgheNghiep.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T03:42:19.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAA4BAAAAAAAAAAAiwGECAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T08:07:43.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20251118030416_Add_KhamSucKhoe.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\20251118030416_Add_KhamSucKhoe.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Migrations\\20251118030416_Add_KhamSucKhoe.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\20251118030416_Add_KhamSucKhoe.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Migrations\\20251118030416_Add_KhamSucKhoe.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T08:07:14.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "20250725013028_DeleteThuTu3.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\20250725013028_DeleteThuTu3.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Migrations\\20250725013028_DeleteThuTu3.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\20250725013028_DeleteThuTu3.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Migrations\\20250725013028_DeleteThuTu3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:50:29.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20250725012930_RemoveThuTuTrongNgayColumn.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\20250725012930_RemoveThuTuTrongNgayColumn.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Migrations\\20250725012930_RemoveThuTuTrongNgayColumn.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\20250725012930_RemoveThuTuTrongNgayColumn.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Migrations\\20250725012930_RemoveThuTuTrongNgayColumn.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:50:28.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "20250725012622_DeleteThuTu2.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\20250725012622_DeleteThuTu2.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Migrations\\20250725012622_DeleteThuTu2.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\20250725012622_DeleteThuTu2.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Migrations\\20250725012622_DeleteThuTu2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:50:26.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "20250725012516_DeleteThuTu.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\20250725012516_DeleteThuTu.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Migrations\\20250725012516_DeleteThuTu.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\20250725012516_DeleteThuTu.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Migrations\\20250725012516_DeleteThuTu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:50:23.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "20250723014708_Edit_LichKham.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\20250723014708_Edit_LichKham.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Migrations\\20250723014708_Edit_LichKham.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\20250723014708_Edit_LichKham.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Migrations\\20250723014708_Edit_LichKham.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T03:50:25.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "20250715070238_Add_New.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\20250715070238_Add_New.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Migrations\\20250715070238_Add_New.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\20250715070238_Add_New.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Migrations\\20250715070238_Add_New.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAwwHAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T01:12:29.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Entity\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Entity\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Entity\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Entity\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T06:55:44.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Entity\\AppUser.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Entity\\AppUser.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Entity\\AppUser.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Entity\\AppUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T06:55:41.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Document_BH_EditModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\EditModels\\Document_BH_EditModel.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\EditModels\\Document_BH_EditModel.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\EditModels\\Document_BH_EditModel.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\EditModels\\Document_BH_EditModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAiwB4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T00:47:07.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "KSK_NhanVien_DangKy_EditModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\EditModels\\KSK_NhanVien_DangKy_EditModel.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\EditModels\\KSK_NhanVien_DangKy_EditModel.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\EditModels\\KSK_NhanVien_DangKy_EditModel.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\EditModels\\KSK_NhanVien_DangKy_EditModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T00:47:18.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "NgoaiVSPController.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Controllers\\NgoaiVSPController.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Controllers\\NgoaiVSPController.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Controllers\\NgoaiVSPController.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Controllers\\NgoaiVSPController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAkwAwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T00:47:03.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Document_BH_ViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\Document_BH_ViewModel.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\ViewModels\\Document_BH_ViewModel.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\Document_BH_ViewModel.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\ViewModels\\Document_BH_ViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:35:30.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "EmailNotification.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\EmailNotification.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\ViewModels\\EmailNotification.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\EmailNotification.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\ViewModels\\EmailNotification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:35:03.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Vsp_ISO.Web\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T07:55:30.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Views\\Home\\About.cshtml",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "Vsp_ISO.Web\\Views\\Home\\About.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T02:33:17.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\ScaffoldingReadMe.txt",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "Vsp_ISO.Web\\ScaffoldingReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-11-18T09:30:52.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Mainpage.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\Home\\Mainpage.cshtml",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Views\\Home\\Mainpage.cshtml",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\Home\\Mainpage.cshtml",
+              "RelativeToolTip": "Vsp_ISO.Web\\Views\\Home\\Mainpage.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAGMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T07:55:35.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "SharedResource.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\SharedResource.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\SharedResource.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\SharedResource.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\SharedResource.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T09:30:54.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Vsp_ISO.Web\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T07:52:49.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "UserRoleViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\UserRoleViewModel.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\ViewModels\\UserRoleViewModel.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\UserRoleViewModel.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\ViewModels\\UserRoleViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:34:52.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "SecurityHeadersMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Ultility\\SecurityHeadersMiddleware.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Ultility\\SecurityHeadersMiddleware.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Ultility\\SecurityHeadersMiddleware.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Ultility\\SecurityHeadersMiddleware.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAswFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T07:48:25.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "IMailServices.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Services\\IMailServices.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Services\\IMailServices.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Services\\IMailServices.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Services\\IMailServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T07:58:32.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "UserInforViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\UserInforViewModel.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\ViewModels\\UserInforViewModel.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\UserInforViewModel.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\ViewModels\\UserInforViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:34:55.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "IJWTManagerServices.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Services\\IJWTManagerServices.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Services\\IJWTManagerServices.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Services\\IJWTManagerServices.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Services\\IJWTManagerServices.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T06:55:27.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "bootstrap-grid.min.css",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\wwwroot\\vendors\\bootstrap\\css\\bootstrap-grid.min.css",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\wwwroot\\vendors\\bootstrap\\css\\bootstrap-grid.min.css",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\wwwroot\\vendors\\bootstrap\\css\\bootstrap-grid.min.css",
+              "RelativeToolTip": "Vsp_ISO.Web\\wwwroot\\vendors\\bootstrap\\css\\bootstrap-grid.min.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-19T03:48:48.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Lich_KSK_EditModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\EditModels\\Lich_KSK_EditModel.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\EditModels\\Lich_KSK_EditModel.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\EditModels\\Lich_KSK_EditModel.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\EditModels\\Lich_KSK_EditModel.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAwwAUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T09:15:48.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "MailSettings.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\MailSettings.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\ViewModels\\MailSettings.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\MailSettings.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\ViewModels\\MailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:34:57.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "KhamSucKhoeController.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Controllers\\KhamSucKhoeController.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Controllers\\KhamSucKhoeController.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Controllers\\KhamSucKhoeController.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Controllers\\KhamSucKhoeController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAwDABAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T08:45:27.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "View_NhanVien_All.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\KhamSucKhoe\\View_NhanVien_All.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Models\\KhamSucKhoe\\View_NhanVien_All.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\KhamSucKhoe\\View_NhanVien_All.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Models\\KhamSucKhoe\\View_NhanVien_All.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAawBQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T08:54:25.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "LichKhamSucKhoe.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\KhamSucKhoe\\LichKhamSucKhoe.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Models\\KhamSucKhoe\\LichKhamSucKhoe.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\KhamSucKhoe\\LichKhamSucKhoe.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Models\\KhamSucKhoe\\LichKhamSucKhoe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:00:08.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Tokens.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\Tokens.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Models\\Tokens.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\Tokens.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Models\\Tokens.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T00:48:24.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "LoginResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\LoginResponse.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Models\\LoginResponse.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\LoginResponse.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Models\\LoginResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:33:38.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:33:40.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "ChuyenDeNuRegister.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\Register\\ChuyenDeNuRegister.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Models\\Register\\ChuyenDeNuRegister.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\Register\\ChuyenDeNuRegister.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Models\\Register\\ChuyenDeNuRegister.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:33:46.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "KSK_NhanVien_ViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\KSK_NhanVien_ViewModel.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\ViewModels\\KSK_NhanVien_ViewModel.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\KSK_NhanVien_ViewModel.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\ViewModels\\KSK_NhanVien_ViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:35:00.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:34:58.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "ViewNhanVienAll.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\KhamSucKhoe\\ViewNhanVienAll.cshtml",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Views\\KhamSucKhoe\\ViewNhanVienAll.cshtml",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\KhamSucKhoe\\ViewNhanVienAll.cshtml",
+              "RelativeToolTip": "Vsp_ISO.Web\\Views\\KhamSucKhoe\\ViewNhanVienAll.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T08:59:23.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "20251118030416_Add_KhamSucKhoe.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\20251118030416_Add_KhamSucKhoe.Designer.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Migrations\\20251118030416_Add_KhamSucKhoe.Designer.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Migrations\\20251118030416_Add_KhamSucKhoe.Designer.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Migrations\\20251118030416_Add_KhamSucKhoe.Designer.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAcwDcBAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T08:07:40.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "View_DanhBa_NhanVien.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\KhamSucKhoe\\View_DanhBa_NhanVien.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Models\\KhamSucKhoe\\View_DanhBa_NhanVien.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\KhamSucKhoe\\View_DanhBa_NhanVien.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Models\\KhamSucKhoe\\View_DanhBa_NhanVien.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T08:59:57.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Index_NuChuyenDe.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\KhamSucKhoe\\Index_NuChuyenDe.cshtml",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Views\\KhamSucKhoe\\Index_NuChuyenDe.cshtml",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\KhamSucKhoe\\Index_NuChuyenDe.cshtml",
+              "RelativeToolTip": "Vsp_ISO.Web\\Views\\KhamSucKhoe\\Index_NuChuyenDe.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T07:53:02.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "KSK_AdminIndex.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\KhamSucKhoe\\KSK_AdminIndex.cshtml",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Views\\KhamSucKhoe\\KSK_AdminIndex.cshtml",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\KhamSucKhoe\\KSK_AdminIndex.cshtml",
+              "RelativeToolTip": "Vsp_ISO.Web\\Views\\KhamSucKhoe\\KSK_AdminIndex.cshtml",
+              "ViewState": "AgIAABwCAAAAAAAAAAAAACgCAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T07:53:11.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "AdminIndex.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\NgoaiVSP\\AdminIndex.cshtml",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Views\\NgoaiVSP\\AdminIndex.cshtml",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\NgoaiVSP\\AdminIndex.cshtml",
+              "RelativeToolTip": "Vsp_ISO.Web\\Views\\NgoaiVSP\\AdminIndex.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T07:48:45.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\Shared\\Components\\Header\\Default.cshtml",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Views\\Shared\\Components\\Header\\Default.cshtml",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\Shared\\Components\\Header\\Default.cshtml",
+              "RelativeToolTip": "Vsp_ISO.Web\\Views\\Shared\\Components\\Header\\Default.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAiwDoAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T01:10:42.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "UserRoleGroup.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\UserRoleGroup.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\ViewModels\\UserRoleGroup.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\ViewModels\\UserRoleGroup.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\ViewModels\\UserRoleGroup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:34:53.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "FilesAttachment.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\BaoHiem\\FilesAttachment.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Models\\BaoHiem\\FilesAttachment.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\BaoHiem\\FilesAttachment.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Models\\BaoHiem\\FilesAttachment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:09:38.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "Document_BH.cs",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\BaoHiem\\Document_BH.cs",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Models\\BaoHiem\\Document_BH.cs",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Models\\BaoHiem\\Document_BH.cs",
+              "RelativeToolTip": "Vsp_ISO.Web\\Models\\BaoHiem\\Document_BH.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:09:37.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "KhamSucKhoe_ViewNhanVienAll_Postman_Complete.json",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\KhamSucKhoe_ViewNhanVienAll_Postman_Complete.json",
+              "RelativeDocumentMoniker": "KhamSucKhoe_ViewNhanVienAll_Postman_Complete.json",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\KhamSucKhoe_ViewNhanVienAll_Postman_Complete.json",
+              "RelativeToolTip": "KhamSucKhoe_ViewNhanVienAll_Postman_Complete.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-17T08:59:22.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "INDEX.md",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\INDEX.md",
+              "RelativeDocumentMoniker": "INDEX.md",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\INDEX.md",
+              "RelativeToolTip": "INDEX.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-17T08:59:09.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "KhamSucKhoe_ViewNhanVienAll_Implementation_Guide.md",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\KhamSucKhoe_ViewNhanVienAll_Implementation_Guide.md",
+              "RelativeDocumentMoniker": "KhamSucKhoe_ViewNhanVienAll_Implementation_Guide.md",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\KhamSucKhoe_ViewNhanVienAll_Implementation_Guide.md",
+              "RelativeToolTip": "KhamSucKhoe_ViewNhanVienAll_Implementation_Guide.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-17T08:47:24.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "POSTMAN_EXECUTIVE_SUMMARY.md",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\POSTMAN_EXECUTIVE_SUMMARY.md",
+              "RelativeDocumentMoniker": "POSTMAN_EXECUTIVE_SUMMARY.md",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\POSTMAN_EXECUTIVE_SUMMARY.md",
+              "RelativeToolTip": "POSTMAN_EXECUTIVE_SUMMARY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-17T08:58:41.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "kham-suc-khoe-view-nhan-vien.js",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\wwwroot\\js\\kham-suc-khoe-view-nhan-vien.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\kham-suc-khoe-view-nhan-vien.js",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\wwwroot\\js\\kham-suc-khoe-view-nhan-vien.js",
+              "RelativeToolTip": "wwwroot\\js\\kham-suc-khoe-view-nhan-vien.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-17T08:47:43.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "POSTMAN_TESTING_GUIDE.md",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\POSTMAN_TESTING_GUIDE.md",
+              "RelativeDocumentMoniker": "POSTMAN_TESTING_GUIDE.md",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\POSTMAN_TESTING_GUIDE.md",
+              "RelativeToolTip": "POSTMAN_TESTING_GUIDE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-17T08:56:24.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "POSTMAN_QUICK_START.md",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\POSTMAN_QUICK_START.md",
+              "RelativeDocumentMoniker": "POSTMAN_QUICK_START.md",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\POSTMAN_QUICK_START.md",
+              "RelativeToolTip": "POSTMAN_QUICK_START.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-17T08:57:08.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "POSTMAN_ARCHITECTURE.md",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\POSTMAN_ARCHITECTURE.md",
+              "RelativeDocumentMoniker": "POSTMAN_ARCHITECTURE.md",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\POSTMAN_ARCHITECTURE.md",
+              "RelativeToolTip": "POSTMAN_ARCHITECTURE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-17T08:58:12.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "README_TESTING_PACKAGE.md",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\README_TESTING_PACKAGE.md",
+              "RelativeDocumentMoniker": "README_TESTING_PACKAGE.md",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\README_TESTING_PACKAGE.md",
+              "RelativeToolTip": "README_TESTING_PACKAGE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-17T08:57:35.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Vsp_ISO.Web\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Vinhtv\\Downloads\\03 KTSK\u0110K net core\\03 KTSK\u0110K net core\\Vsp_ISO.Web\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Vsp_ISO.Web\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-17T07:52:52.128Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+﻿@model VSP_HealthExam.Web.EditModels.Document_BH_EditModel
+
+@{
+    ViewData["Title"] = "Update Document BH";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="row" style="margin-bottom: 80px"></div>
+        <div class="col-10">
+            <h3>@Loc["OutVsp.UpdateInfo"]</h3>
+        </div>
+        <div class="col-2 text-end">
+            <a class="btn btn-warning" asp-action="Index" asp-controller="NgoaiVSP" style="margin-bottom: 10px">@Loc["OutVsp.BacktoHomne"]</a>
+        </div>
+    </div>
+   
+
+    <form id="formUpdateDoc" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="DanhSo">@Loc["OutVsp.CreateDanhSo"]</label>
+            <input asp-for="DanhSo" class="form-control" readonly />
+            <input asp-for="DanhSo" class="form-control" type="hidden" />
+            <span asp-validation-for="DanhSo" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="TenBenhVien">@Loc["OutVsp.Hospital"]</label>
+            <input type="text" asp-for="TenBenhVien" class="form-control">
+            <span asp-validation-for="TenBenhVien" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ThongTin">@Loc["OutVsp.Info"]</label>
+            <input type="text" asp-for="ThongTin" class="form-control">
+            <span asp-validation-for="ThongTin" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="NgayBatDauKham">@Loc["OutVsp.StartDate"]</label>
+            <input type="date" asp-for="NgayBatDauKham" class="form-control">
+            <span asp-validation-for="NgayBatDauKham" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="NgayKetThucKham">@Loc["OutVsp.EndDate"]</label>
+            <input type="date" asp-for="NgayKetThucKham" class="form-control">
+            <span asp-validation-for="NgayKetThucKham" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="LoaiHinhDieuTri">@Loc["OutVsp.TypeOfTreatment"]</label>
+            <input type="text" asp-for="LoaiHinhDieuTri" class="form-control">
+            <span asp-validation-for="LoaiHinhDieuTri" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="HinhThucKCB">@Loc["OutVsp.FormOfMedical"]</label>
+            <div class="form-check form-switch form-switch-lg text-success">
+                <input type="checkbox" class="form-check-input" id="switchStatusHTKCB" @(Model.HinhThucKCB == "Ngoại trú" ? "checked" : "") />
+                <input type="hidden" asp-for="HinhThucKCB" id="hiddenHTKCB" />
+                <label class="form-check-label" for="switchStatusHTKCB" id="labelStatusHTKCB">
+                    @(Model.HinhThucKCB == "Ngoại trú" ? "Ngoại trú" : "Nội trú")
+                </label>
+                <span asp-validation-for="HinhThucKCB" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DongYSuDung">@Loc["OutVsp.AgreeUseInfo"]</label>
+            <div class="form-check form-switch form-switch-lg text-success">
+                <input type="checkbox" class="form-check-input" id="switchStatus" @(Model.DongYSuDung == "Đồng ý" ? "checked" : "") />
+                <input type="hidden" asp-for="DongYSuDung" id="hiddenDongYSuDung" />
+                <label class="form-check-label" for="switchStatus" id="labelStatus">
+                    @(Model.DongYSuDung == "Đồng ý" ? "Đồng ý" : "Không")
+                </label>
+
+                <span asp-validation-for="DongYSuDung" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row ">
+            @foreach(var file in Model.FilesAttachments)
+            {
+                <div class="row">
+                <input type="hidden" asp-for="@file.Id" />
+                <div class="col">
+                    <div class="form-group">
+                        <label class="text-muted">@Loc["OutVsp.FileDescription"]</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text"><i class="flag-icon flag-icon-vn"></i></span>
+                            <input asp-for="@file.Description" class="form-control form-control-sm"
+                                   placeholder="File name" readonly/>
+                            <input asp-for="@file.Description" class="form-control form-control-sm"
+                                   placeholder="File name" type="hidden" />
+                        </div>
+                      
+                        <span asp-validation-for="FileNames" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label class="text-muted">@Loc["OutVsp.FileName"]</label>
+                        <div class="input-group input-group-sm">
+                            <a href="/Documents/UploadFile/@file.FileName" target="_blank"><em>@file.FileName</em></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1" style="display: flex; align-items: center;">
+                    <span class="ms-2">
+                        <i class="fa fa-trash-alt text-danger" role="button" onclick="deleteRow(this,@file.Id) style="line-height: 2.5rem; vertical-align: middle; font-size: 1.2rem;"></i>
+                    </span>
+                </div>
+                </div>
+            }
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>@Loc["OutVsp.AddNewFile"]</label>
+            </div>
+            <label for="Files">@Loc["OutVsp.AddNewFileDetail"]</label>
+            <div class="col text-end">
+                <span class="btn btn-icon btn-sm btn-rounded btn-primary" href="javascript:void(0)" id="addnewfile"
+                      data-bs-toggle="tooltip" title="Add more files">
+                    <span class="icon"><i class="fa fa-plus"></i></span>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="text-muted">@Loc["OutVsp.FileDescription"]</label>
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-text"><i class="fa fa-file"></i></span>
+                        <input asp-for="Descriptions" class="form-control form-control-sm"
+                               placeholder="Desciptions" />
+                    </div>
+                    <span asp-validation-for="Descriptions" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="text-muted">@Loc["OutVsp.FileName"]</label>
+                    <input type="file" asp-for="Files" class="form-control form-control-sm" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.zip,.rar" />
+                    <span asp-validation-for="Files" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-1" style="display: flex; align-items: center;">
+                <span class="ms-2">
+                    <i class="fa fa-trash-alt text-danger" role="button" onclick="clearFirstRowData(this)" style="line-height: 2.5rem; vertical-align: middle; font-size: 1.2rem;"></i>
+                </span>
+            </div>
+        </div>
+        <div id="createmorefile">
+        </div>
+
+        <button type="submit" class="btn btn-primary">@Loc["OutVsp.Submit"]</button>
+    </form>
+    <!-- Thông báo kết quả -->
+    <div class="row mt-2">
+        <div class="col-12">
+            <div id="thongBaoUpdateDoc" class="alert d-none" role="alert"></div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function(){
+            $("#addnewfile").click(function () {
+               $("#createmorefile").before(`
+                   <div class="row mb-3">
+                        <div class="col">
+                            <div class="form-group">
+                                <label class="text-muted">Mô tả</label>
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-text"><i class="flag-icon flag-icon-ru"></i></span>
+                                    <input asp-for="Descriptions" class="form-control form-control-sm"
+                                           placeholder="File name" />
+                                </div>
+                                <span asp-validation-for="FileNames" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label class="text-muted">SelectFile</label>
+                                <input type="file" asp-for="Files" class="form-control form-control-sm" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.zip,.rar" />
+                                <span asp-validation-for="Files" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-1" style="display: flex; align-items: center;">
+                            <span class="ms-2"><i class="fa fa-trash-alt text-danger" role="button" onclick="removeRow(this)" style="line-height: 2.5rem; vertical-align: middle; font-size: 1.2rem;"></i></span>
+                        </div>
+                       </div>
+               `)
+            });
+            window.removeRow = function (element) {
+                                    $(element).closest('.row').remove();
+            };
+             // Handle switchStatus checkbox change
+            $("#switchStatus").on("change", function () {
+                var checkbox = $(this);
+                var label = $("#labelStatus");
+                var hiddenInput = $("#hiddenDongYSuDung");
+                if (checkbox.is(":checked")) {
+                    label.text("Đồng ý");
+                    hiddenInput.val("Đồng ý");
+                } else {
+                    label.text("Không");
+                    hiddenInput.val("Không");
+                }
+            });
+             // Initialize checkbox and hidden input based on model value
+            var initialValue = @Json.Serialize(Model.DongYSuDung);
+            if (initialValue === "1") {
+                $("#switchStatus").prop("checked", true);
+                $("#labelStatus").text("Đồng ý");
+                $("#hiddenDongYSuDung").val("Đồng ý");
+            } else {
+                $("#switchStatus").prop("checked", false);
+                $("#labelStatus").text("Không");
+                $("#hiddenDongYSuDung").val("Không");
+            }
+             // Handle switchStatusHTKCB checkbox change for HinhThucKCB
+            $("#switchStatusHTKCB").on("change", function () {
+                var checkbox = $(this);
+                var label = $("#labelStatusHTKCB");
+                var hiddenInput = $("#hiddenHTKCB");
+                if (checkbox.is(":checked")) {
+                    label.text("Ngoại trú");
+                    hiddenInput.val("Ngoại trú");
+                } else {
+                    label.text("Nội trú");
+                    hiddenInput.val("Nội trú");
+                }
+            });
+
+            // Initialize checkbox and hidden input for HinhThucKCB based on model value
+            var initialValueHTKCB = @Json.Serialize(Model.HinhThucKCB);
+            if (initialValueHTKCB === "Ngoại trú") {
+                $("#switchStatusHTKCB").prop("checked", true);
+                $("#labelStatusHTKCB").text("Ngoại trú");
+                $("#hiddenHTKCB").val("Ngoại trú");
+            } else {
+                $("#switchStatusHTKCB").prop("checked", false);
+                $("#labelStatusHTKCB").text("Nội trú");
+                $("#hiddenHTKCB").val("Nội trú");
+            }
+
+            $('#formUpdateDoc').submit(function(e) {
+                e.preventDefault();
+                var form = $(this)[0];
+                var formData = new FormData(form);
+                $.ajax({
+                    url: '@Url.Action("UpdateDocument_BH", "NgoaiVSP")',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        if (response.success) {
+                            showThongBaoUpdateDoc(response.message || 'Cập nhật hồ sơ thành công!', true);
+                            setTimeout(function(){ window.location.href = '@Url.Action("Index", "NgoaiVSP")'; }, 1500);
+                        } else {
+                            let msg = response.message || 'Có lỗi xảy ra!';
+                            if (response.errors && response.errors.length > 0) {
+                                msg += '<ul>' + response.errors.map(e => '<li>' + e + '</li>').join('') + '</ul>';
+                            }
+                            showThongBaoUpdateDoc(msg, false);
+                        }
+                    },
+                    error: function(xhr) {
+                        let msg = 'Có lỗi xảy ra khi cập nhật hồ sơ!';
+                        if (xhr.responseJSON && xhr.responseJSON.message) {
+                            msg = xhr.responseJSON.message;
+                        }
+                        if (xhr.responseJSON && xhr.responseJSON.errors && xhr.responseJSON.errors.length > 0) {
+                            msg += '<ul>' + xhr.responseJSON.errors.map(e => '<li>' + e + '</li>').join('') + '</ul>';
+                        }
+                        showThongBaoUpdateDoc(msg, false);
+                    }
+                });
+            });
+            function showThongBaoUpdateDoc(message, isSuccess) {
+                var alertDiv = $('#thongBaoUpdateDoc');
+                alertDiv.removeClass('d-none alert-success alert-danger');
+                alertDiv.addClass(isSuccess ? 'alert-success' : 'alert-danger');
+                alertDiv.html(message);
+                alertDiv.show();
+                if (isSuccess) {
+                    setTimeout(function () {
+                        alertDiv.fadeOut(500, function () {
+                            alertDiv.addClass('d-none').removeClass('alert-success alert-danger').html('');
+                        });
+                    }, 1500);
+                }
+            }
+        });
+        function clearFirstRowData(element) {
+                        // Find the closest .row ancestor
+                        var row = $(element).closest('.row');
+                        // Clear the FileName input
+                        row.find('input[name="FileNames"]').val('');
+                        // Clear the file input
+                        row.find('input[type="file"]').val('');
+         };
+        function deleteRow(element, fileId) {
+                    // Remove the file row from the UI
+                    $(element).closest('.row').remove();
+
+                    // Optionally, add a hidden input to mark the file for deletion on server post
+                    var deletedFilesInput = $('<input>')
+                        .attr('type', 'hidden')
+                        .attr('name', 'DeletedFileIds')
+                        .val(fileId);
+                    $('form').append(deletedFilesInput);
+        };
+    </script>
+}

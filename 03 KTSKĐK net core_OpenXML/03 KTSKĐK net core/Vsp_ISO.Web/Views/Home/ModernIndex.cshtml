@@ -1,0 +1,72 @@
+@using System.Globalization;
+@{
+    ViewData["Title"] = "Trang chủ - Hệ thống Khám sức khỏe VSP";
+}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title">@Loc["Home.Title"]</h1>
+            <p class="hero-subtitle">@Loc["Home.Welcome"]</p>
+        </div>
+        <div class="hero-image">
+            <div class="hero-illustration">
+                <i class="fas fa-heartbeat"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Actions Section -->
+<section class="main-actions-section">
+    <div class="container">
+        <div class="actions-grid">
+            <div class="action-card">
+                <div class="action-content">
+                    <h5 class="action-title">@Loc["Home.LoginDescription"]</h5>
+                    <a href="/Account/Login" class="btn btn-primary btn-lg">
+                        <i class="fas fa-sign-in-alt"></i>
+                        @Loc["Home.Login"]
+                    </a>
+                </div>
+            </div>
+            
+            <div class="action-card">
+                <div class="action-content">
+                    <h5 class="action-title">@Loc["Home.SupportDescription"]</h5>
+                    <a href="/Home/About" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-headset"></i>
+                        @Loc["Home.Support"]
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Commitment Section -->
+<section class="commitment-section">
+    <div class="container">
+        <div class="commitment-card">
+            <div class="commitment-content">
+                <i class="fas fa-shield-alt commitment-icon"></i>
+                <p class="commitment-text">@Loc["Home.Commitment"]</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Specialized Registration -->
+<section class="specialized-section">
+    <div class="container">
+        <div class="specialized-card">
+            <a href="@Url.Action("Index", "ChuyenDeNuRegister")" class="btn btn-primary btn-lg specialized-btn">
+                <i class="fas fa-user-plus"></i> 
+                @Loc["Home.RegisterWomenSpecialized"]
+            </a>
+        </div>
+    </div>
+</section>
+
+ 

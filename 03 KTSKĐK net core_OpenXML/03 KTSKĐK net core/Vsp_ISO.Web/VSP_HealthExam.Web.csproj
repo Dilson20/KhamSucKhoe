@@ -1,0 +1,181 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    
+	  <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\js\**" />
+    <Compile Remove="wwwroot\plugins\**" />
+    <Compile Remove="wwwroot\vendors\overlayScrollbars\**" />
+    <Content Remove="wwwroot\js\**" />
+    <Content Remove="wwwroot\plugins\**" />
+    <Content Remove="wwwroot\vendors\overlayScrollbars\**" />
+    <EmbeddedResource Remove="wwwroot\js\**" />
+    <EmbeddedResource Remove="wwwroot\plugins\**" />
+    <EmbeddedResource Remove="wwwroot\vendors\overlayScrollbars\**" />
+    <None Remove="wwwroot\js\**" />
+    <None Remove="wwwroot\plugins\**" />
+    <None Remove="wwwroot\vendors\overlayScrollbars\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <!-- Temporarily commented out COM references for .NET Core compatibility -->
+  <!--
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>9</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>00020813-0000-0000-c000-000000000046</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>8</VersionMinor>
+      <VersionMajor>2</VersionMajor>
+      <Guid>2df8d04c-5bfa-101b-bde5-00aa0044de52</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>7</VersionMinor>
+      <VersionMajor>8</VersionMajor>
+      <Guid>00020905-0000-0000-c000-000000000046</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.PowerPoint">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>12</VersionMinor>
+      <VersionMajor>2</VersionMajor>
+      <Guid>91493440-5a91-11cf-8700-00aa0060263b</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  -->
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+    <None Include="wwwroot\vendors\select2\js\i18n\af.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\ar.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\az.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\bg.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\bn.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\bs.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\ca.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\cs.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\da.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\de.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\dsb.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\el.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\en.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\es.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\et.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\eu.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\fa.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\fi.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\fr.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\gl.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\he.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\hi.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\hr.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\hsb.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\hu.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\hy.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\id.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\is.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\it.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\ja.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\ka.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\km.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\ko.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\lt.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\lv.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\mk.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\ms.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\nb.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\ne.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\nl.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\pl.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\ps.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\pt-BR.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\pt.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\ro.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\ru.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\sk.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\sl.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\sq.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\sr-Cyrl.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\sr.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\sv.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\th.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\tk.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\tr.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\uk.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\vi.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\zh-CN.js" />
+    <None Include="wwwroot\vendors\select2\js\i18n\zh-TW.js" />
+    <None Include="wwwroot\vendors\select2\js\select2.full.js" />
+    <None Include="wwwroot\vendors\select2\js\select2.full.min.js" />
+    <None Include="wwwroot\vendors\select2\js\select2.js" />
+    <None Include="wwwroot\vendors\select2\js\select2.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.102.3" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.0.0" />
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
+    <PackageReference Include="MailKit" Version="4.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="9.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+    <PackageReference Include="QRCoder" Version="1.4.2" />
+    <PackageReference Include="System.DirectoryServices" Version="9.0.0" />
+    <PackageReference Include="System.DirectoryServices.AccountManagement" Version="9.0.0" />
+    <PackageReference Include="System.Net.Http.Json" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\vendors\sweetalert2\dist\sweetalert2.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Documents\" />
+    <Folder Include="EditModels\Register\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Models\Register\" />
+    <Folder Include="Ultility\" />
+    <Folder Include="ViewModels\KhamSucKhoe\" />
+    <Folder Include="ViewModels\Register\" />
+  </ItemGroup>
+
+</Project>

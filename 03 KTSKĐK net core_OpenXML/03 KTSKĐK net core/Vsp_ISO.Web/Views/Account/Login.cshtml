@@ -1,0 +1,79 @@
+﻿@model VSP_HealthExam.Web.ViewModels.LoginViewModel
+@{
+    Layout = "_Layout";
+}
+    <link href="~/dist/css/styleksk.css" rel="stylesheet" asp-append-version="true" />
+<div class="row" style="margin-bottom: 50px"></div>
+<div class="container">
+    <h1>Sign In</h1>
+    <form id="loginfrm" class="form-horizontal ng-pristine ng-valid" onsubmit="submitLoginHandler(this)" method="post">
+        <div class="form-group">
+            <label asp-for="DanhSo">Danh số/ Табельный номер </label>
+            <div class="imput-group">
+                <span class="input-affix-wrapper">
+                    <span class="input-prefix"><i class="fa fa-user"></i></span>
+                    <input type="text" asp-for="DanhSo" class="form-control">
+                </span>
+            </div>
+            <span asp-validation-for="DanhSo" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <div class="imput-group">
+                <span class="input-affix-wrapper">
+                    <span class="input-prefix"><i class="fa fa-key"></i></span>
+                    <input type="password" class="form-control" asp-for="Password">
+                </span>
+            </div>
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="validation-summary text-danger mb-2"></div>
+        <div class="form-group">
+            <button type="submit" id="btnSubmit" class="btn btn-primary">Login</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="~/vendors/jquery/dist/jquery.validate.min.js"></script>
+    <script src="~/vendors/jquery/dist/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+        });
+
+        $("#_returnURL").attr("value", window.location.href);
+        submitLoginHandler = function (form) {
+            event.preventDefault();
+            if ($(form).valid()) {
+                $("#btnSubmit").attr("disabled", true);
+                $("#btnSubmit").append('<span class="spinner-border spinner-border-sm ml-2"></span>');
+                $.ajax({
+                    url: '/Account/Login',
+                    type: 'POST',
+                    data: $(form).serialize(),
+                    success: function (res) {
+                        console.log(res);
+                        $("#btnSubmit").attr("disabled", false);
+                        $("#btnSubmit").children("span").remove();
+                        $(".validation-summary").html('');
+                        if (res.success === true) {
+                                location.href = '/Home/Mainpage';
+                        } else if (res.error) {
+                                $(".validation-summary").html(`<ul><li>${$('<div>').text(res.error).html()}</li></ul>`);
+                        }
+                    },
+                    error: function (err) {
+                        console.log('AJAX Error:', err);
+                        $("#btnSubmit").attr("disabled", false);
+                        $("#btnSubmit").children("span").remove();
+                    }
+                });
+            }
+        };
+    </script>
+}
+

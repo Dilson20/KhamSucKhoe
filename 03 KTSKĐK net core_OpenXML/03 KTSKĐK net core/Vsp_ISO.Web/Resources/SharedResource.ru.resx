@@ -1,0 +1,871 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btn_Logout" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="btn_SignIn" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="errMsg_Length20Incorrect" xml:space="preserve">
+    <value>Ввод не более 20 символов</value>
+  </data>
+  <data name="lbl_Danhso" xml:space="preserve">
+    <value>Табельный номер</value>
+  </data>
+  <data name="lbl_Password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="lbl_Welcome" xml:space="preserve">
+    <value>Добро пожаловать</value>
+  </data>
+  <data name="msgError_AccBloked" xml:space="preserve">
+    <value>Аккаунт заблокирован. Свяжитесь с администратором</value>
+  </data>
+  <data name="msgError_AccIncorectPass" xml:space="preserve">
+    <value>Неверный пароль</value>
+  </data>
+  <data name="msgError_AccInvalidLogin" xml:space="preserve">
+    <value>Ошибка входа</value>
+  </data>
+  <data name="msgError_AccNotAdmin" xml:space="preserve">
+    <value>Данная учетная запись не имеет прав администратора</value>
+  </data>
+  <data name="msgError_AccNotExit" xml:space="preserve">
+    <value>Аккаунт не существует</value>
+  </data>
+  <data name="msgError_AdRequiredId" xml:space="preserve">
+    <value>Введите аккаунт администратора</value>
+  </data>
+  <data name="msgError_AdRequiredPass" xml:space="preserve">
+    <value>Введите пароль администратора</value>
+  </data>
+  <data name="Russian" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="Vietnamese" xml:space="preserve">
+    <value>Tiếng Việt</value>
+  </data>
+  <data name="lbl_Schedule" xml:space="preserve">
+    <value>Составить новый график сбора анализов</value>
+  </data>
+  <data name="plh_ChooseDonvi" xml:space="preserve">
+    <value>Выберите предприятие ...</value>
+  </data>
+  <data name="lbl_Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="lbl_Close" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="lbl_Create" xml:space="preserve">
+    <value>Создать новый пакет документов</value>
+  </data>
+  <data name="lbl_Delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="lbl_DonVi" xml:space="preserve">
+    <value>Подразделение</value>
+  </data>
+  <data name="lbl_Edit" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="lbl_GhiChu" xml:space="preserve">
+    <value>Примечания</value>
+  </data>
+  <data name="lbl_NgayLenLich" xml:space="preserve">
+    <value>Дата сдачи анализов</value>
+  </data>
+  <data name="lbl_Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="msg_Delete" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить?</value>
+  </data>
+  <data name="hdr_DOB" xml:space="preserve">
+    <value>Дата рождения</value>
+  </data>
+  <data name="hdr_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="hdr_IdCard" xml:space="preserve">
+    <value>№ паспорта</value>
+  </data>
+  <data name="hdr_Marriged" xml:space="preserve">
+    <value>Семейное положение</value>
+  </data>
+  <data name="hdr_StaffName" xml:space="preserve">
+    <value>ФИО</value>
+  </data>
+  <data name="hdr_StaffTag" xml:space="preserve">
+    <value>Должность</value>
+  </data>
+  <data name="hdr_Stt" xml:space="preserve">
+    <value>№</value>
+  </data>
+  <data name="hdr_Tel" xml:space="preserve">
+    <value>Тел.</value>
+  </data>
+  <data name="hdr_WorkingTag" xml:space="preserve">
+    <value>Выполняемая работа</value>
+  </data>
+  <data name="lbl_Adress" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="lbl_Date" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="lbl_DateDeclare" xml:space="preserve">
+    <value>Дата и время составления заявки</value>
+  </data>
+  <data name="lbl_DecleareForm1" xml:space="preserve">
+    <value>Записаться заново (Форма 1):</value>
+  </data>
+  <data name="lbl_DecleareForm2" xml:space="preserve">
+    <value>Записаться заново (Форма 2):</value>
+  </data>
+  <data name="lbl_DecleareForm3" xml:space="preserve">
+    <value>Записаться заново (Форма 3):</value>
+  </data>
+  <data name="lbl_Female" xml:space="preserve">
+    <value>Жен.</value>
+  </data>
+  <data name="lbl_Gender" xml:space="preserve">
+    <value>Пол</value>
+  </data>
+  <data name="lbl_Male" xml:space="preserve">
+    <value>Муж.</value>
+  </data>
+  <data name="lbl_SoftName" xml:space="preserve">
+    <value>МЕД.ОСМОТР</value>
+  </data>
+  <data name="lbl_WorkPlace" xml:space="preserve">
+    <value>Место работы</value>
+  </data>
+  <data name="msg_DecleareForm1" xml:space="preserve">
+    <value>Офисные работники.</value>
+  </data>
+  <data name="msg_DecleareForm2" xml:space="preserve">
+    <value>Сотрудники, работающие во вредных производственных условиях на берегу и в море. В условиях шума, вибрации, пыли, магнитных полей, химикатов, высокого давления….</value>
+  </data>
+  <data name="msg_DecleareForm3" xml:space="preserve">
+    <value>Сотрудники, работающие в условиях контакта с радиацией.</value>
+  </data>
+  <data name="msg_DownloadFailed" xml:space="preserve">
+    <value>Ошибка при скачивании!</value>
+  </data>
+  <data name="msg_Sure" xml:space="preserve">
+    <value>Вы уверены что хотите сохранить данный вариант заявки на запись?</value>
+  </data>
+  <data name="msg_UpdateFailed" xml:space="preserve">
+    <value>Обновление не выполнено !</value>
+  </data>
+  <data name="msg_UpdateSuccess" xml:space="preserve">
+    <value>Обновление успешно !</value>
+  </data>
+  <data name="plh_ChooseDate" xml:space="preserve">
+    <value>Выберите дата ...</value>
+  </data>
+  <data name="plh_Email" xml:space="preserve">
+    <value>Введите email ... (при.: hungdm.rd@vietsov.com.vn)</value>
+  </data>
+  <data name="plh_IdCard" xml:space="preserve">
+    <value>Введите номер паспорта ...</value>
+  </data>
+  <data name="plh_Marriged" xml:space="preserve">
+    <value>Введите свое семейное положение ...</value>
+  </data>
+  <data name="plh_Tel" xml:space="preserve">
+    <value>Введите телефонный номер ... (при.: 0903456789)</value>
+  </data>
+  <data name="til_Caution" xml:space="preserve">
+    <value>Внимание</value>
+  </data>
+  <data name="til_From" xml:space="preserve">
+    <value>С</value>
+  </data>
+  <data name="til_To" xml:space="preserve">
+    <value>По</value>
+  </data>
+  <data name="plh_Address" xml:space="preserve">
+    <value>Введите адрес ...</value>
+  </data>
+  <data name="msgError_Choosed" xml:space="preserve">
+    <value>Необходимо выбрать !</value>
+  </data>
+  <data name="msgError_Formated" xml:space="preserve">
+    <value>Неверный формат !</value>
+  </data>
+  <data name="msgError_Required" xml:space="preserve">
+    <value>Необходимо ввести данные !</value>
+  </data>
+  <data name="plh_Emty" xml:space="preserve">
+    <value>Полностью забронировано!</value>
+  </data>
+  <data name="msgError_TelFormated" xml:space="preserve">
+    <value>Неверный формат номера телефона (правильный формат: 0903456789)</value>
+  </data>
+  <data name="til_DownNonRegistered" xml:space="preserve">
+    <value>Перечень не записавшихся</value>
+  </data>
+  <data name="til_DownRegisterd" xml:space="preserve">
+    <value>Перечень записавшихся</value>
+  </data>
+  <data name="lbl_Hour" xml:space="preserve">
+    <value>Время сдачи анализов</value>
+  </data>
+  <data name="plh_ChooseHour" xml:space="preserve">
+    <value>Выберите время ...</value>
+  </data>
+  <data name="msg_DeclarationSuccess" xml:space="preserve">
+    <value>Вы успешно записались на {loai kham}</value>
+  </data>
+  <data name="lbl_RegisteredInfo" xml:space="preserve">
+    <value>Ваш порядковый номер:</value>
+  </data>
+  <data name="lbl_RegisteredNon" xml:space="preserve">
+    <value>Нет!</value>
+  </data>
+  <data name="lbl_Medic" xml:space="preserve">
+    <value>ЦМО</value>
+  </data>
+  <data name="til_Admin" xml:space="preserve">
+    <value>Администрация&lt;br/&gt;МЕД.ОСМОТР</value>
+  </data>
+  <data name="til_NoticeBrowser" xml:space="preserve">
+    <value>Не поддерживает Internet Explorer. Пожалуйста, используйте другой браузер. (Chrome, Safari, Firefox, Opera ...)</value>
+  </data>
+  <data name="til_NoticePassword" xml:space="preserve">
+    <value>Используйте тот же пароль, как и для входа в Программу управления персоналом</value>
+  </data>
+  <data name="msgError_EmailFormated" xml:space="preserve">
+    <value>Неверный формат ! (правильный формат: hungdm.rd@vietsov.com.vn)</value>
+  </data>
+  <data name="msgError_RequiredId" xml:space="preserve">
+    <value>Введите табельный номер</value>
+  </data>
+  <data name="msgError_RequiredPass" xml:space="preserve">
+    <value>Введите пароль</value>
+  </data>
+  <data name="msg_DeclareNotice" xml:space="preserve">
+    <value>&lt;u&gt;Инструкция&lt;/u&gt;:&lt;br/&gt;&lt;i&gt;Заполните все поля, отмеченные звездочкой (*).&lt;br/&gt;Если автоматически заполненная информация неверна, пожалуйста, исправьте ее.&lt;br/&gt;Внимание: Персонал ПМТиВР (работающий в море) и ОВВО записываются в подразделениях, где они фактически работают.&lt;/i&gt;</value>
+  </data>
+  <data name="lbl_Manage" xml:space="preserve">
+    <value>Управление</value>
+  </data>
+  <data name="lbl_Count" xml:space="preserve">
+    <value>Количество</value>
+  </data>
+  <data name="lbl_ScheduleEdit" xml:space="preserve">
+    <value>Редактировать график сбора анализов</value>
+  </data>
+  <data name="lbl_DK_DonVi" xml:space="preserve">
+    <value>Подразделение, записавшее сотрудника на осмотр</value>
+  </data>
+  <data name="lbl_Send" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="lbl_Document" xml:space="preserve">
+    <value>Документ</value>
+  </data>
+  <data name="msg_PhotoBring" xml:space="preserve">
+    <value>&lt;u&gt;Внимание:&lt;/u&gt;&lt;i&gt; Приходя на пробу, необходимо принести 1 фото 4х6.&lt;br/&gt;&amp;emsp;&amp;emsp;&amp;emsp;Вы прибываете в нужную дату и в назначенное время.&lt;/i&gt;</value>
+  </data>
+  <data name="lbl_ChooseDonvi" xml:space="preserve">
+    <value>Выберите предприятие ...</value>
+  </data>
+  <data name="hdr_ExtTel" xml:space="preserve">
+    <value>Добавочный Тел.</value>
+  </data>
+  <data name="plh_ExtTel" xml:space="preserve">
+    <value>Введите тел. номер ... (при.: 3456)</value>
+  </data>
+  <data name="msg_RegisterFailed" xml:space="preserve">
+    <value>Ошибка! Пожалуйста, проверьте введенную информацию.</value>
+  </data>
+  <data name="plh_EmtyDate" xml:space="preserve">
+    <value>Запланированное!</value>
+  </data>
+  <data name="mainpage.RegisterForHealthCheck" xml:space="preserve">
+    <value>Регистрация на мед.осмотр</value>
+  </data>
+  <data name="mainpage.MainHealthCheck" xml:space="preserve">
+    <value>Медицинское обследование</value>
+  </data>
+  <data name="mainpage.Register" xml:space="preserve">
+    <value>Зарегистрироваться</value>
+  </data>
+  <data name="mainpage.InforOutsideVsp" xml:space="preserve">
+    <value>Информация о медицинском осмотре вне медицинского центра VSP</value>
+  </data>
+  <data name="OutVsp.AddNew" xml:space="preserve">
+    <value>Добавить новый пакет документов</value>
+  </data>
+  <data name="OutVsp.BacktoHomne" xml:space="preserve">
+    <value>Вернуться на главную страницу</value>
+  </data>
+  <data name="OutVsp.Hospital" xml:space="preserve">
+    <value>Название больницы</value>
+  </data>
+  <data name="OutVsp.Info" xml:space="preserve">
+    <value>Диагноз</value>
+  </data>
+  <data name="OutVsp.StartDate" xml:space="preserve">
+    <value>Дата начала обследования</value>
+  </data>
+  <data name="OutVsp.EndDate" xml:space="preserve">
+    <value>Дата окончания обследования / лечения</value>
+  </data>
+  <data name="OutVsp.TypeOfTreatment" xml:space="preserve">
+    <value>Метод лечения</value>
+  </data>
+  <data name="OutVsp.TTYTNote" xml:space="preserve">
+    <value>Примечание от TTYT</value>
+  </data>
+  <data name="OutVsp.TTYTResult" xml:space="preserve">
+    <value>Результат</value>
+  </data>
+  <data name="OutVsp.TTYTOptions" xml:space="preserve">
+    <value>Параметры</value>
+  </data>
+  <data name="OutVsp.CreateDanhSo" xml:space="preserve">
+    <value>Табельный номер</value>
+  </data>
+  <data name="OutVsp.FileName" xml:space="preserve">
+    <value>Имя файла</value>
+  </data>
+  <data name="OutVsp.FileDescription" xml:space="preserve">
+    <value>Описание файла</value>
+  </data>
+  <data name="OutVsp.Submit" xml:space="preserve">
+    <value>Подать заявку на рассмотрение</value>
+  </data>
+  <data name="OutVsp.CreateDocumentBH" xml:space="preserve">
+    <value>Создать новый пакет документов</value>
+  </data>
+  <data name="Out.Vsp.Informationonmedicalexamination" xml:space="preserve">
+    <value>Информация о медицинском обследовании и лечении вне ЦМО VSP</value>
+  </data>
+  <data name="OutVsp.HistoryRegister" xml:space="preserve">
+    <value>История регистрации</value>
+  </data>
+  <data name="OutVsp.UpdateInfo" xml:space="preserve">
+    <value>Изменить информацию профиля</value>
+  </data>
+  <data name="OutVsp.AgreeUseInfo" xml:space="preserve">
+    <value>Согласие на использование информации в медицинских целях</value>
+  </data>
+  <data name="OutVsp.AddNewFile" xml:space="preserve">
+    <value>Прикрепить файл</value>
+  </data>
+  <data name="OutVsp.FormOfMedical" xml:space="preserve">
+    <value>Форма медицинского обследования и лечения</value>
+  </data>
+  <data name="OutVsp.TypeOfKCB" xml:space="preserve">
+    <value>Хин Тхук Кхам Чуа Бон</value>
+  </data>
+  <data name="Validation.HtmlScriptNotAllowed" xml:space="preserve">
+    <value>Разрешены только буквы, цифры, пробелы, знаки препинания . , ; : ( ). Символы HTML/script не допускаются</value>
+  </data>
+  <data name="btn_Support" xml:space="preserve">
+    <value>Поддерживать</value>
+  </data>
+  <data name="index_Info" xml:space="preserve">
+    <value>Для записи на мед.осмотр, пожалуйста, войдите в систему по табельному номеру</value>
+  </data>
+  <data name="index_InfoSuport" xml:space="preserve">
+    <value>Возникли вопросы? Нужна помощь?</value>
+  </data>
+  <data name="mainpage.RegisterForHealthCheckDetail" xml:space="preserve">
+    <value>Запись на анализ крови, обследование сердечно-сосудистой системы, тематическое обследование</value>
+  </data>
+  <data name="mainpage.InforOutsideVspDetail" xml:space="preserve">
+    <value>За предоставление медицинских карт обследования и лечения за пределами медицинского центра «Вьетсовпетро»</value>
+  </data>
+  <data name="mainpage.BottomNavigationText" xml:space="preserve">
+    <value>Зарегистрируйтесь на проверку здоровья → Регистрация на мед.осмотр</value>
+  </data>
+  <data name="OutVsp.AddNewFileDetail" xml:space="preserve">
+    <value>Отпуск по болезни с выплатой пособий по социальному страхованию или выписка из больницы или выписка из истории болезни или рецепт на амбулаторное лечение, не требующее отпуска</value>
+  </data>
+  <!-- KhamSucKhoe Index Page -->
+  <data name="KSK.Title" xml:space="preserve">
+    <value>Регистрация на медицинское обследование Vietsovpetro</value>
+  </data>
+  <data name="KSK.RegistrationInfo" xml:space="preserve">
+    <value>Информация о регистрации</value>
+  </data>
+  <data name="KSK.FullName" xml:space="preserve">
+    <value>ФИО</value>
+  </data>
+  <data name="KSK.EmployeeNumber" xml:space="preserve">
+    <value>Регистрационный номер</value>
+  </data>
+  <data name="KSK.Email" xml:space="preserve">
+    <value>Электронная почта</value>
+  </data>
+  <data name="KSK.Department" xml:space="preserve">
+    <value>Подразделение</value>
+  </data>
+  <data name="KSK.Gender" xml:space="preserve">
+    <value>Пол</value>
+  </data>
+  <data name="KSK.Gender_Male" xml:space="preserve">
+    <value>Мужской</value>
+  </data>
+  <data name="KSK.Gender_Female" xml:space="preserve">
+    <value>Женский</value>
+  </data>
+  <data name="KSK.EmployeeGroup" xml:space="preserve">
+    <value>Группа сотрудников</value>
+  </data>
+  <data name="KSK.NoRegistrationData" xml:space="preserve">
+    <value>Нет данных о регистрации на медицинское обследование.</value>
+  </data>
+  <data name="KSK.RegisteredSchedule" xml:space="preserve">
+    <value>Заявки на обследование</value>
+  </data>
+  <data name="KSK.HealthCheckRegistration" xml:space="preserve">
+    <value>Подать заявку на прохождение медицинского обследования</value>
+  </data>
+  <data name="KSK.ExaminationType" xml:space="preserve">
+    <value>Тип обследования</value>
+  </data>
+  <data name="KSK.SelectExaminationType" xml:space="preserve">
+    <value>-- Выберите тип обследования --</value>
+  </data>
+  <data name="KSK.PeriodicHealthCheck" xml:space="preserve">
+    <value>Периодическое медицинское обследование</value>
+  </data>
+  <data name="KSK.LeadershipCheck" xml:space="preserve">
+    <value>Обследование руководства</value>
+  </data>
+  <data name="KSK.WomenSpecializedCheck" xml:space="preserve">
+    <value>Специализированное обследование женщин</value>
+  </data>
+  <data name="KSK.CardiovascularCheck" xml:space="preserve">
+    <value>Специализированное обследование сердечно-сосудистой системы</value>
+  </data>
+  <data name="KSK.SelectSchedule" xml:space="preserve">
+    <value>Выберите дату и время</value>
+  </data>
+  <data name="KSK.SelectScheduleOption" xml:space="preserve">
+    <value>-- Выберите расписание --</value>
+  </data>
+  <data name="KSK.SpecialRequirements" xml:space="preserve">
+    <value>Особые требования</value>
+  </data>
+  <data name="KSK.SpecialRequirementsPlaceholder" xml:space="preserve">
+    <value>Введите особые требования (если есть)</value>
+  </data>
+  <data name="KSK.Register" xml:space="preserve">
+    <value>Зарегистрироваться</value>
+  </data>
+  <data name="KSK.Loading" xml:space="preserve">
+    <value>Загрузка...</value>
+  </data>
+  <data name="KSK.NoScheduleRegistered" xml:space="preserve">
+    <value>Вы еще не записались ни на одно обследование.</value>
+  </data>
+  <data name="KSK.CannotLoadRegisteredSchedule" xml:space="preserve">
+    <value>Не удается загрузить список зарегистрированного расписания!</value>
+  </data>
+  <data name="KSK.AllTypesRegistered" xml:space="preserve">
+    <value>Вы зарегистрировались на все типы обследований</value>
+  </data>
+  <data name="KSK.NoScheduleForType" xml:space="preserve">
+    <value>Нет расписания для этого типа</value>
+  </data>
+  <data name="KSK.NoDepartmentInfo" xml:space="preserve">
+    <value>Нет информации о подразделении</value>
+  </data>
+  <data name="KSK.CannotLoadSchedule" xml:space="preserve">
+    <value>Не удается загрузить список расписаний!</value>
+  </data>
+  <data name="KSK.PleaseSelectSchedule" xml:space="preserve">
+    <value>Пожалуйста, выберите расписание!</value>
+  </data>
+  <data name="KSK.RegistrationSuccess" xml:space="preserve">
+    <value>Регистрация успешна!</value>
+  </data>
+  <data name="KSK.ErrorOccurred" xml:space="preserve">
+    <value>Произошла ошибка!</value>
+  </data>
+  <data name="KSK.RegistrationError" xml:space="preserve">
+    <value>Произошла ошибка при регистрации!</value>
+  </data>
+  <data name="KSK.STT" xml:space="preserve">
+    <value>№</value>
+  </data>
+  <data name="KSK.ExaminationTypeHeader" xml:space="preserve">
+    <value>Тип обследования</value>
+  </data>
+  <data name="KSK.ExaminationTime" xml:space="preserve">
+    <value>Время обследования:</value>
+  </data>
+  <data name="KSK.SpecialRequirementsHeader" xml:space="preserve">
+    <value>Особые требования</value>
+  </data>
+  <data name="KSK.Status" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="KSK.NoSpecialRequirements" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="KSK.RemainingSlots" xml:space="preserve">
+    <value>мест</value>
+  </data>
+  <!-- Examination Types -->
+  <data name="KSK.ExaminationType_Periodic" xml:space="preserve">
+    <value>Регулярный забор крови</value>
+  </data>
+  <data name="KSK.ExaminationType_Leadership" xml:space="preserve">
+    <value>Обследование руководства</value>
+  </data>
+  <data name="KSK.ExaminationType_WomenSpecialized" xml:space="preserve">
+    <value>Специализированное обследование женщин</value>
+  </data>
+  <data name="KSK.ExaminationType_Cardiovascular" xml:space="preserve">
+    <value>Специализированное обследование сердечно-сосудистой системы</value>
+  </data>
+  <data name="KSK.ExaminationType_Vaccine" xml:space="preserve">
+    <value>Вакцинация</value>
+  </data>
+  <data name="KSK.ExaminationType_HealthCheck" xml:space="preserve">
+    <value>Периодический медицинский осмотр</value>
+  </data>
+  <data name="KSK.AdminNote" xml:space="preserve">
+    <value>Примечания ЦМО:</value>
+  </data>
+  <!-- Status -->
+  <data name="KSK.Status_Registered" xml:space="preserve">
+    <value>Зарегистрировано</value>
+  </data>
+  <data name="KSK.HealthCheckConditionMessage" xml:space="preserve">
+    <value>Вам необходимо зарегистрироваться на плановый забор крови перед регистрацией на плановый медицинский осмотр!</value>
+  </data>
+  <data name="KSK.HealthCheckConditionNote" xml:space="preserve">
+    <value>Примечание: Вам необходимо зарегистрироваться на плановый забор крови перед регистрацией на плановый медицинский осмотр.</value>
+  </data>
+  <data name="KSK.Status_Unknown" xml:space="preserve">
+    <value>Не определено</value>
+  </data>
+  <!-- NgoaiVSP Messages -->
+  <data name="OutVsp.NoMedicalRecords" xml:space="preserve">
+    <value>У вас пока нет данных об обследованиях или лечении вне ЦМО. Чтобы создать новую заявку на возмещение PVI, нажмите кнопку "Добавить новый пакет документов" выше.</value>
+  </data>
+  <!-- Form Options -->
+  <data name="OutVsp.Option_Inpatient" xml:space="preserve">
+    <value>Стационарный</value>
+  </data>
+  <data name="OutVsp.Option_Outpatient" xml:space="preserve">
+    <value>Амбулаторный</value>
+  </data>
+  <data name="OutVsp.Option_Agree" xml:space="preserve">
+    <value>Согласен</value>
+  </data>
+  <data name="OutVsp.Option_Disagree" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="OutVsp.ChooseFile" xml:space="preserve">
+    <value>Выбрать файл</value>
+  </data>
+  <data name="OutVsp.NoFileChosen" xml:space="preserve">
+    <value>Файл не выбран</value>
+  </data>
+  <!-- Home/Index -->
+  <data name="Home.Title" xml:space="preserve">
+    <value>Введение</value>
+  </data>
+  <data name="Home.Welcome" xml:space="preserve">
+    <value>Добро пожаловать на страницу медицинской декларации</value>
+  </data>
+  <data name="Home.LoginDescription" xml:space="preserve">
+    <value>Для записи на мед.осмотр, пожалуйста, войдите в систему по табельному номеру</value>
+  </data>
+  <data name="Home.Login" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="Home.SupportDescription" xml:space="preserve">
+    <value>Для получения поддержки по медицинским вопросам и руководству</value>
+  </data>
+  <data name="Home.Support" xml:space="preserve">
+    <value>Поддержка</value>
+  </data>
+  <data name="Home.Commitment" xml:space="preserve">
+    <value>Мы обязуемся предоставлять высококачественные услуги медицинского осмотра для обеспечения здоровья сотрудников Vietsovpetro.</value>
+  </data>
+  <data name="Home.RegisterWomenSpecialized" xml:space="preserve">
+    <value>Регистрация на специализированное обследование женщин</value>
+  </data>
+  <!-- Header -->
+  <data name="Header.HealthSystem" xml:space="preserve">
+    <value>Система медицинского осмотра</value>
+  </data>
+  <data name="Header.Home" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="Header.Login" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="Header.Logout" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="Header.Hotline" xml:space="preserve">
+    <value>Горячая линия: 0888.91.72.72</value>
+  </data>
+  <data name="Header.WorkingHours" xml:space="preserve">
+    <value>Рабочее время: 7:00 - 17:00</value>
+  </data>
+  <data name="Header.Address" xml:space="preserve">
+    <value>02 Pasteur, p. Tam Thắng, TP Hồ Chí Minh</value>
+  </data>
+  <!-- Contact Information -->
+  <data name="Contact.Title" xml:space="preserve">
+    <value>Thông tin liên hệ / Контактная информация:</value>
+  </data>
+  <data name="Contact.Medical" xml:space="preserve">
+    <value>Y Tế/ Медицинский</value>
+  </data>
+  <data name="Contact.MedicalName" xml:space="preserve">
+    <value>Nguyễn Thị Phi, VSP</value>
+  </data>
+  <data name="Contact.MedicalPhone" xml:space="preserve">
+    <value>8487</value>
+  </data>
+  <data name="Contact.MedicalEmail" xml:space="preserve">
+    <value>phint.mc@vietsov.com.vn</value>
+  </data>
+  <data name="Contact.ITSupport" xml:space="preserve">
+    <value>IT Support: Lê Ngọc Tân</value>
+  </data>
+  <data name="Contact.ITPhone" xml:space="preserve">
+    <value>5188</value>
+  </data>
+  <data name="Contact.ITEmail" xml:space="preserve">
+    <value>tanin.ts@vietsov.com.vn</value>
+  </data>
+  <data name="Contact.Navigation" xml:space="preserve">
+    <value>Медицинский → ЦМО</value>
+  </data>
+  <!-- Main Page Content -->
+  <data name="MainPage.WelcomeTitle" xml:space="preserve">
+    <value>Добро пожаловать на страницу медицинской декларации → Добро пожаловать в систему медицинского осмотра</value>
+  </data>
+  <data name="MainPage.Introduction" xml:space="preserve">
+    <value>Введение</value>
+  </data>
+  <data name="MainPage.WelcomeMessage" xml:space="preserve">
+    <value>Добро пожаловать в систему медицинского осмотра</value>
+  </data>
+  <data name="MainPage.LoginCardTitle" xml:space="preserve">
+    <value>Для записи на мед.осмотр, пожалуйста, войдите в систему по табельному номеру</value>
+  </data>
+  <data name="MainPage.SupportCardTitle" xml:space="preserve">
+    <value>Возникли вопросы? Забыли пароль?</value>
+  </data>
+  <data name="MainPage.Commitment" xml:space="preserve">
+    <value>Мы обязуемся предоставлять высококачественные услуги медицинского осмотра для обеспечения здоровья сотрудников Vietsovpetro.</value>
+  </data>
+  <data name="MainPage.NavigationText" xml:space="preserve">
+    <value>Для записи на мед.осмотр, пожалуйста, войдите в систему по табельному номеру</value>
+  </data>
+  <!-- Email Notification Footer -->
+  <data name="Email.Footer" xml:space="preserve">
+    <value>Это автоматическое уведомление из системы Мед.осмотров ЦМО. Пожалуйста не отвечайте на это письмо.</value>
+  </data>
+  <!-- Table Headers -->
+  <data name="Table.Form" xml:space="preserve">
+    <value>Форма</value>
+  </data>
+  <data name="Table.NoteFromCMO" xml:space="preserve">
+    <value>Примечание от ЦМО</value>
+  </data>
+  <data name="Table.Status" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="Table.Options" xml:space="preserve">
+    <value>Опции</value>
+  </data>
+  <!-- About Page -->
+  <data name="About.Title" xml:space="preserve">
+    <value>Thông tin liên hệ / Контактная информация:</value>
+  </data>
+  <data name="About.UserGuide" xml:space="preserve">
+    <value>Руководство пользователя</value>
+  </data>
+  <data name="About.DownloadDescription" xml:space="preserve">
+    <value>Скачать руководство пользователя системы медицинского осмотра:</value>
+  </data>
+  <data name="About.DownloadButton" xml:space="preserve">
+    <value>Руководство пользователя - VN</value>
+  </data>
+  <data name="About.ContactInfo" xml:space="preserve">
+    <value>Контактная информация</value>
+  </data>
+  <data name="About.Medical" xml:space="preserve">
+    <value>Y Tế / ЦМО</value>
+  </data>
+  <data name="About.PersonInCharge" xml:space="preserve">
+    <value>Ответственное лицо:</value>
+  </data>
+  <data name="About.Phone" xml:space="preserve">
+    <value>Телефон:</value>
+  </data>
+  <data name="About.Email" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="About.DownloadButtonVN" xml:space="preserve">
+    <value>Руководство пользователя - VN</value>
+  </data>
+  <data name="About.DownloadButtonRU" xml:space="preserve">
+    <value>Руководство пользователя - RU</value>
+  </data>
+  <!-- Main Page Content -->
+  <data name="MainPage.PhysicalExamination" xml:space="preserve">
+    <value>Физическое обследование</value>
+  </data>
+  <data name="MainPage.RegisterHealthCheck" xml:space="preserve">
+    <value>Зарегистрируйтесь на проверку здоровья</value>
+  </data>
+  <data name="MainPage.RegisterHealthCheckDescription" xml:space="preserve">
+    <value>Для записи на забор крови, обследование сердечно-сосудистой системы, обследование по теме</value>
+  </data>
+  <data name="MainPage.RegisterButton" xml:space="preserve">
+    <value>Зарегистрироваться</value>
+  </data>
+  <data name="MainPage.OutsideMedicalInfo" xml:space="preserve">
+    <value>Данные об обследовании и лечении вне ЦМО VSP</value>
+  </data>
+  <data name="MainPage.OutsideMedicalDescription" xml:space="preserve">
+    <value>Подача заявок на возмещение расходов PVI</value>
+  </data>
+  <data name="MainPage.FemaleSpecialistApproval" xml:space="preserve">
+    <value>Phê duyệt đăng ký chuyên đề nữ</value>
+  </data>
+  <data name="MainPage.FemaleSpecialistDescription" xml:space="preserve">
+    <value>Quản trị viên duyệt từ chối các đăng ký khám chuyên đề nữ.</value>
+  </data>
+  <data name="MainPage.GoToApprovalPage" xml:space="preserve">
+    <value>Vào trang phê duyệt</value>
+  </data>
+  <data name="MainPage.PhysicalToMedical" xml:space="preserve">
+    <value>Физическое → Медицинское</value>
+  </data>
+</root>
